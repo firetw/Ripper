@@ -1,0 +1,67 @@
+2014-05-12 21:27:54
+Tel:18201490661  自动登录失败
+2014-05-12 21:29:06
+Tel:13522015813  获取到验证码异常:[TIMEOUT]
+2014-05-12 21:29:16
+Tel:13522015813  自动登录失败
+2014-05-12 21:29:22
+Tel:13522028775  获取到验证码异常:[eng]
+2014-05-12 21:29:32
+Tel:13522028775  自动登录失败
+2014-05-12 21:30:39
+Tel:13701160944  获取到验证码异常:[民]
+2014-05-12 21:30:49
+Tel:13701160944  自动登录失败
+2014-05-12 21:31:05
+Tel:13520501058  自动登录失败
+2014-05-12 21:31:33
+Tel:13522566707  获取到验证码异常:[不清楚]
+2014-05-12 21:31:43
+Tel:13522566707  自动登录失败
+2014-05-12 21:32:20
+Tel:13522513863  自动登录失败
+2014-05-12 21:32:36
+Tel:13522391049  获取到验证码异常:[1]
+2014-05-12 21:32:46
+Tel:13522391049  自动登录失败
+2014-05-12 21:33:11
+Tel:13522535208  获取到验证码异常:[不清楚]
+2014-05-12 21:33:21
+Tel:13522535208  自动登录失败
+2014-05-12 21:33:36
+Tel:13520497683  获取到验证码异常:[j]
+2014-05-12 21:33:46
+Tel:13520497683  自动登录失败
+2014-05-12 21:34:01
+Tel:13521772217  自动登录失败
+2014-05-12 21:35:01
+Tel:13488641300  自动登录失败
+2014-05-12 21:35:17
+Tel:13522392856  获取到验证码异常:[,m]
+2014-05-12 21:35:27
+Tel:13522392856  自动登录失败
+2014-05-12 21:36:39
+Tel:13521886896  获取到验证码异常:[TIMEOUT]
+2014-05-12 21:36:49
+Tel:13521886896  自动登录失败
+2014-05-12 21:37:27
+Tel:13521862924  自动登录失败
+2014-05-12 21:37:59
+System.ObjectDisposedException: 无法访问已释放的对象。
+对象名:“WebBrowser”。
+   在 System.Windows.Forms.WebBrowser.get_AxIWebBrowser2()
+   在 System.Windows.Forms.WebBrowser.get_Document()
+   在 System.Windows.Forms.WebBrowser.get_DocumentStream()
+   在 System.Windows.Forms.WebBrowser.get_DocumentText()
+   在 WeiBoGrab.FLoginSubmit.ValidateLogin(WebBrowser browser) 位置 E:\wangning\Ripper123\Ripper\FetionAward\FetionLoginHelper.cs:行号 177
+   在 WeiBoGrab.FLoginSubmit.Do(WebBrowser browser, UUVerifyImp imp) 位置 E:\wangning\Ripper123\Ripper\FetionAward\FetionLoginHelper.cs:行号 471
+2014-05-12 21:37:59
+System.ObjectDisposedException: 无法访问已释放的对象。
+对象名:“WebBrowser”。
+   在 System.Windows.Forms.WebBrowser.get_AxIWebBrowser2()
+   在 System.Windows.Forms.WebBrowser.PerformNavigate2(Object& URL, Object& flags, Object& targetFrameName, Object& postData, Object& headers)
+   在 System.Windows.Forms.WebBrowser.set_Url(Uri value)
+   在 System.Windows.Forms.WebBrowser.Navigate(Uri url)
+   在 WeiBoGrab.FLoginSubmit.LoginOut(WebBrowser browser) 位置 E:\wangning\Ripper123\Ripper\FetionAward\FetionLoginHelper.cs:行号 434
+   在 WeiBoGrab.FLoginSubmit.Do(WebBrowser browser, UUVerifyImp imp) 位置 E:\wangning\Ripper123\Ripper\FetionAward\FetionLoginHelper.cs:行号 486
+   在 WeiBoGrab.FLogin.DoJob(Object state) 位置 E:\wangning\Ripper123\Ripper\FetionAward\FLogin.cs:行号 128

@@ -1,0 +1,330 @@
+2014-05-12 21:27:31 INFO  WeiBoGrab.FLogin 
+    uuUserName:wangnuu,uuPwd:123qwe!@#
+
+2014-05-12 21:27:31 INFO  WeiBoGrab.FLogin 
+    验证码工具初始化成功
+
+2014-05-12 21:27:36 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:18201490661  开始获取验证码
+
+2014-05-12 21:27:44 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:18201490661  获取验证码:[6871]
+
+2014-05-12 21:27:54 WARN  WeiBoGrab.FLoginSubmit 
+    Tel:18201490661  登录验证已超时
+
+2014-05-12 21:27:54 ERROR WeiBoGrab.FLoginSubmit 
+    Tel:18201490661  自动登录失败
+
+2014-05-12 21:27:55 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:18201490661  自动登录成功
+
+2014-05-12 21:27:55 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:18201490661  该手机号抽奖机会为:0
+
+2014-05-12 21:27:56 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13522015813  开始获取验证码
+
+2014-05-12 21:29:06 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13522015813  获取验证码:[TIMEOUT]
+
+2014-05-12 21:29:06 ERROR WeiBoGrab.FLoginSubmit 
+    Tel:13522015813  获取到验证码异常:[TIMEOUT]
+
+2014-05-12 21:29:16 WARN  WeiBoGrab.FLoginSubmit 
+    Tel:13522015813  登录验证已超时
+
+2014-05-12 21:29:16 ERROR WeiBoGrab.FLoginSubmit 
+    Tel:13522015813  自动登录失败
+
+2014-05-12 21:29:17 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13522015813  自动登录成功
+
+2014-05-12 21:29:17 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13522015813  该手机号抽奖机会为:0
+
+2014-05-12 21:29:17 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13522028775  开始获取验证码
+
+2014-05-12 21:29:22 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13522028775  获取验证码:[eng]
+
+2014-05-12 21:29:22 ERROR WeiBoGrab.FLoginSubmit 
+    Tel:13522028775  获取到验证码异常:[eng]
+
+2014-05-12 21:29:32 WARN  WeiBoGrab.FLoginSubmit 
+    Tel:13522028775  登录验证已超时
+
+2014-05-12 21:29:32 ERROR WeiBoGrab.FLoginSubmit 
+    Tel:13522028775  自动登录失败
+
+2014-05-12 21:29:33 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13522028775  自动登录成功
+
+2014-05-12 21:29:33 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13522028775  该手机号抽奖机会为:0
+
+2014-05-12 21:29:33 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13701160944  开始获取验证码
+
+2014-05-12 21:30:39 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13701160944  获取验证码:[民]
+
+2014-05-12 21:30:39 ERROR WeiBoGrab.FLoginSubmit 
+    Tel:13701160944  获取到验证码异常:[民]
+
+2014-05-12 21:30:49 WARN  WeiBoGrab.FLoginSubmit 
+    Tel:13701160944  登录验证已超时
+
+2014-05-12 21:30:49 ERROR WeiBoGrab.FLoginSubmit 
+    Tel:13701160944  自动登录失败
+
+2014-05-12 21:30:49 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13701160944  自动登录成功
+
+2014-05-12 21:30:49 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13701160944  该手机号抽奖机会为:0
+
+2014-05-12 21:30:49 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13520501058  开始获取验证码
+
+2014-05-12 21:30:55 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13520501058  获取验证码:[yiop]
+
+2014-05-12 21:31:05 WARN  WeiBoGrab.FLoginSubmit 
+    Tel:13520501058  登录验证已超时
+
+2014-05-12 21:31:05 ERROR WeiBoGrab.FLoginSubmit 
+    Tel:13520501058  自动登录失败
+
+2014-05-12 21:31:05 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13520501058  自动登录成功
+
+2014-05-12 21:31:05 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13520501058  该手机号抽奖机会为:0
+
+2014-05-12 21:31:06 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13522566707  开始获取验证码
+
+2014-05-12 21:31:33 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13522566707  获取验证码:[不清楚]
+
+2014-05-12 21:31:33 ERROR WeiBoGrab.FLoginSubmit 
+    Tel:13522566707  获取到验证码异常:[不清楚]
+
+2014-05-12 21:31:43 WARN  WeiBoGrab.FLoginSubmit 
+    Tel:13522566707  登录验证已超时
+
+2014-05-12 21:31:43 ERROR WeiBoGrab.FLoginSubmit 
+    Tel:13522566707  自动登录失败
+
+2014-05-12 21:31:44 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13522566707  自动登录成功
+
+2014-05-12 21:31:44 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13522566707  该手机号抽奖机会为:0
+
+2014-05-12 21:31:44 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13522513863  开始获取验证码
+
+2014-05-12 21:32:10 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13522513863  获取验证码:[0000]
+
+2014-05-12 21:32:20 WARN  WeiBoGrab.FLoginSubmit 
+    Tel:13522513863  登录验证已超时
+
+2014-05-12 21:32:20 ERROR WeiBoGrab.FLoginSubmit 
+    Tel:13522513863  自动登录失败
+
+2014-05-12 21:32:21 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13522513863  自动登录成功
+
+2014-05-12 21:32:21 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13522513863  该手机号抽奖机会为:0
+
+2014-05-12 21:32:22 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13522391049  开始获取验证码
+
+2014-05-12 21:32:36 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13522391049  获取验证码:[1]
+
+2014-05-12 21:32:36 ERROR WeiBoGrab.FLoginSubmit 
+    Tel:13522391049  获取到验证码异常:[1]
+
+2014-05-12 21:32:46 WARN  WeiBoGrab.FLoginSubmit 
+    Tel:13522391049  登录验证已超时
+
+2014-05-12 21:32:46 ERROR WeiBoGrab.FLoginSubmit 
+    Tel:13522391049  自动登录失败
+
+2014-05-12 21:32:47 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13522391049  自动登录成功
+
+2014-05-12 21:32:47 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13522391049  该手机号抽奖机会为:0
+
+2014-05-12 21:32:47 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13522535208  开始获取验证码
+
+2014-05-12 21:33:11 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13522535208  获取验证码:[不清楚]
+
+2014-05-12 21:33:11 ERROR WeiBoGrab.FLoginSubmit 
+    Tel:13522535208  获取到验证码异常:[不清楚]
+
+2014-05-12 21:33:21 WARN  WeiBoGrab.FLoginSubmit 
+    Tel:13522535208  登录验证已超时
+
+2014-05-12 21:33:21 ERROR WeiBoGrab.FLoginSubmit 
+    Tel:13522535208  自动登录失败
+
+2014-05-12 21:33:22 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13522535208  自动登录成功
+
+2014-05-12 21:33:22 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13522535208  该手机号抽奖机会为:0
+
+2014-05-12 21:33:22 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13520497683  开始获取验证码
+
+2014-05-12 21:33:36 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13520497683  获取验证码:[j]
+
+2014-05-12 21:33:36 ERROR WeiBoGrab.FLoginSubmit 
+    Tel:13520497683  获取到验证码异常:[j]
+
+2014-05-12 21:33:46 WARN  WeiBoGrab.FLoginSubmit 
+    Tel:13520497683  登录验证已超时
+
+2014-05-12 21:33:46 ERROR WeiBoGrab.FLoginSubmit 
+    Tel:13520497683  自动登录失败
+
+2014-05-12 21:33:46 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13520497683  自动登录成功
+
+2014-05-12 21:33:46 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13520497683  该手机号抽奖机会为:0
+
+2014-05-12 21:33:46 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13521772217  开始获取验证码
+
+2014-05-12 21:33:51 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13521772217  获取验证码:[GHGK]
+
+2014-05-12 21:34:01 WARN  WeiBoGrab.FLoginSubmit 
+    Tel:13521772217  登录验证已超时
+
+2014-05-12 21:34:01 ERROR WeiBoGrab.FLoginSubmit 
+    Tel:13521772217  自动登录失败
+
+2014-05-12 21:34:01 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13521772217  自动登录成功
+
+2014-05-12 21:34:01 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13521772217  该手机号抽奖机会为:0
+
+2014-05-12 21:34:02 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13488641300  开始获取验证码
+
+2014-05-12 21:34:51 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13488641300  获取验证码:[DDDD]
+
+2014-05-12 21:35:01 WARN  WeiBoGrab.FLoginSubmit 
+    Tel:13488641300  登录验证已超时
+
+2014-05-12 21:35:01 ERROR WeiBoGrab.FLoginSubmit 
+    Tel:13488641300  自动登录失败
+
+2014-05-12 21:35:02 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13488641300  自动登录成功
+
+2014-05-12 21:35:02 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13488641300  该手机号抽奖机会为:0
+
+2014-05-12 21:35:03 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13522392856  开始获取验证码
+
+2014-05-12 21:35:17 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13522392856  获取验证码:[,m]
+
+2014-05-12 21:35:17 ERROR WeiBoGrab.FLoginSubmit 
+    Tel:13522392856  获取到验证码异常:[,m]
+
+2014-05-12 21:35:27 WARN  WeiBoGrab.FLoginSubmit 
+    Tel:13522392856  登录验证已超时
+
+2014-05-12 21:35:27 ERROR WeiBoGrab.FLoginSubmit 
+    Tel:13522392856  自动登录失败
+
+2014-05-12 21:35:28 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13522392856  自动登录成功
+
+2014-05-12 21:35:28 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13522392856  该手机号抽奖机会为:0
+
+2014-05-12 21:35:28 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13521886896  开始获取验证码
+
+2014-05-12 21:36:39 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13521886896  获取验证码:[TIMEOUT]
+
+2014-05-12 21:36:39 ERROR WeiBoGrab.FLoginSubmit 
+    Tel:13521886896  获取到验证码异常:[TIMEOUT]
+
+2014-05-12 21:36:49 WARN  WeiBoGrab.FLoginSubmit 
+    Tel:13521886896  登录验证已超时
+
+2014-05-12 21:36:49 ERROR WeiBoGrab.FLoginSubmit 
+    Tel:13521886896  自动登录失败
+
+2014-05-12 21:36:49 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13521886896  自动登录成功
+
+2014-05-12 21:36:49 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13521886896  该手机号抽奖机会为:0
+
+2014-05-12 21:36:49 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13521862924  开始获取验证码
+
+2014-05-12 21:37:17 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13521862924  获取验证码:[shui]
+
+2014-05-12 21:37:27 WARN  WeiBoGrab.FLoginSubmit 
+    Tel:13521862924  登录验证已超时
+
+2014-05-12 21:37:27 ERROR WeiBoGrab.FLoginSubmit 
+    Tel:13521862924  自动登录失败
+
+2014-05-12 21:37:27 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13521862924  自动登录成功
+
+2014-05-12 21:37:27 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13521862924  该手机号抽奖机会为:0
+
+2014-05-12 21:37:28 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13522316416  开始获取验证码
+
+2014-05-12 21:37:53 INFO  WeiBoGrab.FLoginSubmit 
+    Tel:13522316416  获取验证码:[kdsj]
+
+2014-05-12 21:37:59 ERROR WeiBoGrab.FLoginSubmit 
+    System.ObjectDisposedException: 无法访问已释放的对象。
+对象名:“WebBrowser”。
+   在 System.Windows.Forms.WebBrowser.get_AxIWebBrowser2()
+   在 System.Windows.Forms.WebBrowser.get_Document()
+   在 System.Windows.Forms.WebBrowser.get_DocumentStream()
+   在 System.Windows.Forms.WebBrowser.get_DocumentText()
+   在 WeiBoGrab.FLoginSubmit.ValidateLogin(WebBrowser browser) 位置 E:\wangning\Ripper123\Ripper\FetionAward\FetionLoginHelper.cs:行号 177
+   在 WeiBoGrab.FLoginSubmit.Do(WebBrowser browser, UUVerifyImp imp) 位置 E:\wangning\Ripper123\Ripper\FetionAward\FetionLoginHelper.cs:行号 471
+
+2014-05-12 21:37:59 ERROR WeiBoGrab.FLogin 
+    System.ObjectDisposedException: 无法访问已释放的对象。
+对象名:“WebBrowser”。
+   在 System.Windows.Forms.WebBrowser.get_AxIWebBrowser2()
+   在 System.Windows.Forms.WebBrowser.PerformNavigate2(Object& URL, Object& flags, Object& targetFrameName, Object& postData, Object& headers)
+   在 System.Windows.Forms.WebBrowser.set_Url(Uri value)
+   在 System.Windows.Forms.WebBrowser.Navigate(Uri url)
+   在 WeiBoGrab.FLoginSubmit.LoginOut(WebBrowser browser) 位置 E:\wangning\Ripper123\Ripper\FetionAward\FetionLoginHelper.cs:行号 434
+   在 WeiBoGrab.FLoginSubmit.Do(WebBrowser browser, UUVerifyImp imp) 位置 E:\wangning\Ripper123\Ripper\FetionAward\FetionLoginHelper.cs:行号 486
+   在 WeiBoGrab.FLogin.DoJob(Object state) 位置 E:\wangning\Ripper123\Ripper\FetionAward\FLogin.cs:行号 128
+

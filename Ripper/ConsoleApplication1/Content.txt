@@ -1,0 +1,45 @@
+﻿execmd  ZEEI:BCF=105:;
+ZEEI:BCF=105:;
+
+
+LOADING PROGRAM VERSION 28.17-0
+
+
+
+
+FlexiBSC  ZZBSC155                  2014-03-19  13:59:38
+RADIO NETWORK CONFIGURATION IN BSC:
+                                                         E P  B
+                                      F                  T R  C D-CHANNEL  BUSY
+                      AD OP           R  ET- BCCH/CBCH/  R E  S O&M LINK  HR  FR
+ LAC   CI         HOP ST STATE  FREQ  T  PCM ERACH       X F  U NAME  ST
+                                                                             /GP
+===================== == ====== ==== == ==== =========== = = == ===== == === ===
+
+BCF-0105  ULTRASITE    U WO                                   4 BF105 WO
+ 14711 55791 BTS-0105  U WO                                                0   2
+ WANZUO1          BB/- 
+                                                                              12
+         EDGE TRX-001  L WO       94  0 1796 MBCCH         P  3
+         EDGE TRX-002  L WO        6  0 1796                  1
+         EDGE TRX-003  U W       10  0 1796                  5
+         EDGE TRX-004  U WO       20  0 1796                  5
+ 14711 55792 BTS-0106  U WO                                                0   3
+ WANZUO2          -/-  
+                                                                               4
+         EDGE TRX-005  U WO       32  0 1796                  4
+         EDGE TRX-006  L WO       87  0 1796 MBCCH            2
+ 14711 55793 BTS-0107  U WO                                                0   0
+ WANZUO3          -/-  
+                                                                               4
+         EDGE TRX-009  U WO       67  0 1817                  3
+         EDGE TRX-010  U WO       82  0 1817 MBCCH         P  1
+
+
+COMMAND EXECUTED
+
+
+BASE STATION CONTROLLER HANDLING COMMAND <EE_>
+<  
+NETELNETD_SUCCESS
+NETELNETD>

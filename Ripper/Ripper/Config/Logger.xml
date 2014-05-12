@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <!--对应的文件名-->
+  <Logger type="Common" maxSize="10" fileCount="5" minLevel="DEBUG" dir="./log" encode="gbk">
+    <DEBUG><![CDATA[Common.log]]></DEBUG>
+    <INFO><![CDATA[Common.log]]></INFO>
+    <WARN><![CDATA[Common.log]]></WARN>
+    <ERROR><![CDATA[CommonError.log]]></ERROR>
+  </Logger>
+
+
+  <Logger type="ScanTask" maxSize="10" fileCount="5" minLevel="DEBUG"  dir="./log" encode="gbk">
+    <DEBUG><![CDATA[ScanTask.log]]></DEBUG>
+    <INFO><![CDATA[ScanTask.log]]></INFO>
+    <WARN><![CDATA[ScanTaskError.log]]></WARN>
+    <ERROR><![CDATA[ScanTaskError.log]]></ERROR>
+  </Logger>
+
+  <Logger type="DbWriter" maxSize="10" fileCount="5" minLevel="DEBUG"  dir="./log" encode="gbk">
+    <DEBUG><![CDATA[DbWriter.log]]></DEBUG>
+    <INFO><![CDATA[DbWriter.log]]></INFO>
+    <WARN><![CDATA[DbWriterWarn.log]]></WARN>
+    <ERROR><![CDATA[DbWriterError.log]]></ERROR>
+  </Logger>
+
+  <Logger type="TaskControl" maxSize="10" fileCount="5" minLevel="DEBUG"  dir="./log" encode="gbk">
+    <DEBUG><![CDATA[TaskControl.log]]></DEBUG>
+    <INFO><![CDATA[TaskControl.log]]></INFO>
+    <WARN><![CDATA[TaskControlWarn.log]]></WARN>
+    <ERROR><![CDATA[TaskControlError.log]]></ERROR>
+  </Logger>
+
+
+  <Logger type="Task" maxSize="10" fileCount="5" minLevel="DEBUG"  dir="./log" encode="gbk">
+    <DEBUG><![CDATA[GroupExecuter.log]]></DEBUG>
+    <INFO><![CDATA[GroupExecuter.log]]></INFO>
+    <WARN><![CDATA[GroupExecuterWarn.log]]></WARN>
+    <ERROR><![CDATA[GroupExecuterError.log]]></ERROR>
+  </Logger>
+
+  <Logger type="SubTask" maxSize="10" fileCount="5" minLevel="DEBUG"  dir="./ne" encode="gbk">
+  </Logger>
+</root>

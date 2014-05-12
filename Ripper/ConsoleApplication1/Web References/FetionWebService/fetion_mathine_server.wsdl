@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="isAlive">
+        <s:complexType />
+      </s:element>
+      <s:element name="isAliveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="isAliveResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CollectNeConfigInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="keyword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="neName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="unitName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="object_class" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ccUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ccPwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CollectNeConfigInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CollectNeConfigInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CollectNeConfigInfo2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="keyword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="neName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="unitName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Param3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="object_class" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ccUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ccPwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CollectNeConfigInfo2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CollectNeConfigInfo2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CollectNeConfigInfoParser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="keyword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="neName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="unitName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Param3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="object_class" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ccUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ccPwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CollectNeConfigInfoParserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CollectNeConfigInfoParserResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="test">
+        <s:complexType />
+      </s:element>
+      <s:element name="testResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="testResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="isAliveSoapIn">
+    <wsdl:part name="parameters" element="tns:isAlive" />
+  </wsdl:message>
+  <wsdl:message name="isAliveSoapOut">
+    <wsdl:part name="parameters" element="tns:isAliveResponse" />
+  </wsdl:message>
+  <wsdl:message name="CollectNeConfigInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:CollectNeConfigInfo" />
+  </wsdl:message>
+  <wsdl:message name="CollectNeConfigInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:CollectNeConfigInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CollectNeConfigInfo2SoapIn">
+    <wsdl:part name="parameters" element="tns:CollectNeConfigInfo2" />
+  </wsdl:message>
+  <wsdl:message name="CollectNeConfigInfo2SoapOut">
+    <wsdl:part name="parameters" element="tns:CollectNeConfigInfo2Response" />
+  </wsdl:message>
+  <wsdl:message name="CollectNeConfigInfoParserSoapIn">
+    <wsdl:part name="parameters" element="tns:CollectNeConfigInfoParser" />
+  </wsdl:message>
+  <wsdl:message name="CollectNeConfigInfoParserSoapOut">
+    <wsdl:part name="parameters" element="tns:CollectNeConfigInfoParserResponse" />
+  </wsdl:message>
+  <wsdl:message name="testSoapIn">
+    <wsdl:part name="parameters" element="tns:test" />
+  </wsdl:message>
+  <wsdl:message name="testSoapOut">
+    <wsdl:part name="parameters" element="tns:testResponse" />
+  </wsdl:message>
+  <wsdl:portType name="fetion_mathine_serverSoap">
+    <wsdl:operation name="isAlive">
+      <wsdl:input message="tns:isAliveSoapIn" />
+      <wsdl:output message="tns:isAliveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CollectNeConfigInfo">
+      <wsdl:input message="tns:CollectNeConfigInfoSoapIn" />
+      <wsdl:output message="tns:CollectNeConfigInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CollectNeConfigInfo2">
+      <wsdl:input message="tns:CollectNeConfigInfo2SoapIn" />
+      <wsdl:output message="tns:CollectNeConfigInfo2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CollectNeConfigInfoParser">
+      <wsdl:input message="tns:CollectNeConfigInfoParserSoapIn" />
+      <wsdl:output message="tns:CollectNeConfigInfoParserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="test">
+      <wsdl:input message="tns:testSoapIn" />
+      <wsdl:output message="tns:testSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="fetion_mathine_serverSoap" type="tns:fetion_mathine_serverSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="isAlive">
+      <soap:operation soapAction="http://tempuri.org/isAlive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CollectNeConfigInfo">
+      <soap:operation soapAction="http://tempuri.org/CollectNeConfigInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CollectNeConfigInfo2">
+      <soap:operation soapAction="http://tempuri.org/CollectNeConfigInfo2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CollectNeConfigInfoParser">
+      <soap:operation soapAction="http://tempuri.org/CollectNeConfigInfoParser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="test">
+      <soap:operation soapAction="http://tempuri.org/test" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="fetion_mathine_serverSoap12" type="tns:fetion_mathine_serverSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="isAlive">
+      <soap12:operation soapAction="http://tempuri.org/isAlive" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CollectNeConfigInfo">
+      <soap12:operation soapAction="http://tempuri.org/CollectNeConfigInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CollectNeConfigInfo2">
+      <soap12:operation soapAction="http://tempuri.org/CollectNeConfigInfo2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CollectNeConfigInfoParser">
+      <soap12:operation soapAction="http://tempuri.org/CollectNeConfigInfoParser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="test">
+      <soap12:operation soapAction="http://tempuri.org/test" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="fetion_mathine_server">
+    <wsdl:port name="fetion_mathine_serverSoap" binding="tns:fetion_mathine_serverSoap">
+      <soap:address location="http://10.87.56.182:10897/fetion_mathine_server.asmx" />
+    </wsdl:port>
+    <wsdl:port name="fetion_mathine_serverSoap12" binding="tns:fetion_mathine_serverSoap12">
+      <soap12:address location="http://10.87.56.182:10897/fetion_mathine_server.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

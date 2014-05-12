@@ -1,0 +1,21 @@
+2014-05-12 21:27:53 WARN  WeiBoGrab.FLoginSubmit 
+    Tel:13426207735  登录验证已超时
+
+2014-05-12 21:29:15 WARN  WeiBoGrab.FLoginSubmit 
+    Tel:15911023047  登录验证已超时
+
+2014-05-12 21:29:40 WARN  WeiBoGrab.FLoginSubmit 
+    Tel:13488760754  登录验证已超时
+
+2014-05-12 21:31:01 WARN  WeiBoGrab.FLoginSubmit 
+    Tel:15911023026  登录验证已超时
+
+2014-05-12 21:31:15 WARN  WeiBoGrab.FLoginSubmit 
+    Tel:15911024629  登录验证已超时
+
+2014-05-12 21:32:37 WARN  WeiBoGrab.FLoginSubmit 
+    Tel:13488759924  登录验证已超时
+
+2014-05-12 21:33:58 WARN  WeiBoGrab.FLoginSubmit 
+    Tel:15911023244  登录验证已超时
+

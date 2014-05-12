@@ -1,0 +1,8 @@
+﻿<Application x:Class="Ripper.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="FetionView.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
