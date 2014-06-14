@@ -74,7 +74,7 @@ namespace WeiBoGrab
                 else
                 {
                     MessageBox.Show("验证码工具登录失败", "错误");
-                    log.Error("验证码工具初始化成功");
+                    log.Error("验证码工具初始化失败");
                 }
             }
             catch (Exception ex)
