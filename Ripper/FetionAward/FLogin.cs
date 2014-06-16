@@ -21,8 +21,7 @@ namespace WeiBoGrab
         Queue<Item> queue = new Queue<Item>();
 
         System.Threading.Timer timer;
-        public delegate void OneObjectParaDelegate(object state);
-        public delegate void InvokeDelegate();
+       
         OneObjectParaDelegate handler;
         int _totalCount = 0;
         WaitCallback _doJobAsyncHandler;
@@ -56,7 +55,7 @@ namespace WeiBoGrab
         }
         private void StartUp()
         {
-            webBrowser1.Navigate(new Uri(Core.FetionUrl));
+            webBrowser1.Navigate(new Uri(ConfigCore.FetionUrl));
             ParserFile();
             Start();
 
@@ -167,7 +166,7 @@ namespace WeiBoGrab
             this.Controls.Remove(this.webBrowser1);
             webBrowser1 = new WebBrowser() { Dock = DockStyle.Fill };
             this.Controls.Add(webBrowser1);
-            webBrowser1.Navigate(Core.FetionUrl);
+            webBrowser1.Navigate(ConfigCore.FetionUrl);
             ThreadPool.QueueUserWorkItem(_doJobAsyncHandler, context);
         }
         private void ParserFile()

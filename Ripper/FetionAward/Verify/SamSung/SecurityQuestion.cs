@@ -75,6 +75,7 @@ namespace WeiBoGrab.Verify.SamSung
 
         public void FlushQuestion()
         {
+            if (_questions == null || _questions.Count < 1) return;
             try
             {
                 string path = AppDomain.CurrentDomain.BaseDirectory + "/Config/新增问题.txt";

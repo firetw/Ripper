@@ -9,13 +9,13 @@
   </Logger>
 
 
-  
+
   <Logger type="Task" maxSize="10" fileCount="5" minLevel="DEBUG"  dir="./log" encode="gbk">
-    <DEBUG><![CDATA[award.log]]></DEBUG>
-    <INFO><![CDATA[award.log]]></INFO>
-    <WARN><![CDATA[award.log]]></WARN>
-    <ERROR><![CDATA[award.log]]></ERROR>
+    <DEBUG><![CDATA[已执行的记录.log]]></DEBUG>
+    <INFO><![CDATA[已执行的记录.log]]></INFO>
+    <WARN><![CDATA[已执行的记录.log]]></WARN>
+    <ERROR><![CDATA[已执行的记录.log]]></ERROR>
   </Logger>
 
-   
+
 </root>

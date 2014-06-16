@@ -12,7 +12,7 @@ using System.Text.RegularExpressions;
 namespace FetionLoginer.VerifyHelper
 {
 
-    public static class Core
+    public static class ConfigCore
     {
 
         static Dictionary<string, string> _errorMap = new Dictionary<string, string>();
@@ -32,7 +32,7 @@ namespace FetionLoginer.VerifyHelper
             if (_errorMap.ContainsKey(code)) return _errorMap[code];
             return "";
         }
-        static Core()
+        static ConfigCore()
         {
             Encoding gbk = Encoding.GetEncoding("gbk");
             string errorCode = @"-1001	网络连接失败
@@ -133,9 +133,9 @@ namespace FetionLoginer.VerifyHelper
             StringBuilder result = new StringBuilder();
             int codeId = Wrapper.uu_recognizeByCodeTypeAndPath(url, codeType, result);
             string context = result.ToString();
-            if (!string.IsNullOrEmpty(Core.GetErrorReason(context)))
+            if (!string.IsNullOrEmpty(ConfigCore.GetErrorReason(context)))
             {
-                return Core.UnRecoginize;
+                return ConfigCore.UnRecoginize;
             }
             string resultCode = CheckResult(context, NSOFTID, codeId, strCheckKey);
             sw.Stop();
@@ -158,9 +158,9 @@ namespace FetionLoginer.VerifyHelper
             StringBuilder result = new StringBuilder();
             int codeId = Wrapper.uu_recognizeByCodeTypeAndBytes(picContent, picContent.Length, codeType, result);
             string context = result.ToString();
-            if (!string.IsNullOrEmpty(Core.GetErrorReason(context)))
+            if (!string.IsNullOrEmpty(ConfigCore.GetErrorReason(context)))
             {
-                return Core.UnRecoginize;
+                return ConfigCore.UnRecoginize;
             }
             string resultCode = CheckResult(context, NSOFTID, codeId, strCheckKey);
             sw.Stop();
@@ -180,9 +180,9 @@ namespace FetionLoginer.VerifyHelper
             string cookieResult = string.Empty;
             int codeId = Wrapper.uu_recognizeByCodeTypeAndUrl(url, cookie, codeType, cookieResult, result);
             string context = result.ToString();
-            if (!string.IsNullOrEmpty(Core.GetErrorReason(context)))
+            if (!string.IsNullOrEmpty(ConfigCore.GetErrorReason(context)))
             {
-                return Core.UnRecoginize;
+                return ConfigCore.UnRecoginize;
             }
             string resultCode = CheckResult(context, NSOFTID, codeId, strCheckKey);
             sw.Stop();

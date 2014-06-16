@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using WeiBoGrab.Verify.SamSung;
 
 namespace WeiBoGrab
 {
@@ -16,7 +17,9 @@ namespace WeiBoGrab
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new FLogin());
 
-            Application.Run(new RegisterForm());
+            //Application.Run(new RegisterForm());
+
+            Application.Run(new SamSungManual());
         }
     }
 }

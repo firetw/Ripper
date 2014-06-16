@@ -99,7 +99,8 @@ namespace WeiBoGrab
                 log.Error(GetMsg("验证码验证过程异常 " + ex.ToString()));
                 return result;
             }
-            if (string.IsNullOrEmpty(verify) || verify == "TIMEOUT" || Core.UnRecoginize == verify || verify.Length < Core.VerifyLength)
+
+            if (string.IsNullOrEmpty(verify) || verify == "TIMEOUT" || ConfigCore.UnRecoginize == verify || verify.Length < ConfigCore.VerifyLength)
             {
                 log.Error(GetMsg(string.Format("获取到验证码异常:[{0}]", verify)));
                 return result;
@@ -466,12 +467,12 @@ namespace WeiBoGrab
                 isLogin = LoginClick(browser, imp);
                 if (!isLogin)
                 {
-                    browser.Navigate(Core.FetionUrl);//应对验证码超时
+                    browser.Navigate(ConfigCore.FetionUrl);//应对验证码超时
                 }
                 if (!ValidateLogin(browser))
                 {
                     log.Error(GetMsg(OperationMsg.LoginFailed));
-                    browser.Navigate(Core.FetionUrl);//应对验证超时
+                    browser.Navigate(ConfigCore.FetionUrl);//应对验证超时
                 }
                 if (Parser(browser)) result = 1;
             }
