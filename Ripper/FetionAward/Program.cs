@@ -19,7 +19,7 @@ namespace WeiBoGrab
 
             //Application.Run(new RegisterForm());
 
-            Application.Run(new SamSungManual());
+            Application.Run(new LoginForm());
         }
     }
 }

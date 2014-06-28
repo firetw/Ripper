@@ -1,0 +1,124 @@
+﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Xml;
+using System.Xml.Linq;
+using System.IO;
+using ICSharpCode.SharpZipLib.GZip;
+using System.Text;
+
+namespace WebLoginer.Test
+{
+    [TestClass]
+    public class UnitTest1
+    {
+        [TestMethod]
+        public void TestMethod1()
+        {
+            string context = "1110N6XTjZFHlDRy7L3p5ClHXcHGTS1MJG2Qn8zsgqGGFGskzLlpQ2b!-1280290979!1403230469524";
+            context = context.Replace("!", "%21");
+
+            Assert.IsTrue(context.IndexOf("!") == -1);
+
+        }
+        [TestMethod]
+        public void BuilderCookie()
+        {
+            string cookie = @"CmProvid=xj; 
+            WT_FPC=id=27ac83cfcf55d5478e01403232699581:lv=1403580212335:ss=1403579675263; 
+            JSESSIONID=VvRdTykTDLgfFbf6xsyS7bBy5K1SmtX5BGN2ypvtTfPG6PPgSCJn!-1934896026";
+
+            //首要问题是如何判断成功
+
+            string[] cookies = cookie.Split(';');
+            //CmProvid=xj;path=/;domain=10086.cn;expires=Wed, 24 Jun 2015 03:43:55 GMT
+
+            //exp.setTime(exp.getTime() + Days*24*60*60*1000);
+            System.Net.Cookie c = new System.Net.Cookie("CmProvid", "xj", "/", "10086.cn");
+            c.Expires = DateTime.Now.AddMilliseconds((double)(365 * 24 * 60 * 60 * 1000.0));
+        }
+
+        [TestMethod]
+        public void TestTime()
+        {
+            DateTime time1 = DateTime.Parse("1970-1-1 00:00:00").AddMilliseconds(1403661047401);
+
+            DateTime endTime = DateTime.Now.Subtract(TimeSpan.FromMilliseconds(1403661047401));
+
+            string value = "2";
+            Random random = new Random();
+            long time = (long)(DateTime.Now.Subtract(TimeSpan.FromHours(8)) - DateTime.Parse("1970-1-1 00:00:00")).TotalMilliseconds;
+            for (int i = 2; i < 32 - time.ToString().Length; i++)
+            {
+                value += ((int)Math.Floor(random.NextDouble() * 16.0)).ToString("X");
+            }
+            value += time;
+
+            string wtFpc = string.Format("WT_FPC=id={0}:lv={1}:ss={2}", System.Web.HttpUtility.UrlEncode(value), time + 1800000, time);
+
+
+        }
+
+
+        [TestMethod]
+        public void ReadData()
+        {
+            //string file = @"D:\xml1.xml";
+            string file = @"E:\hf.xml";
+
+            XElement element = XElement.Load(file);
+
+
+            string content = element.Element("part").Value; //"&amp;#24685;&amp;#21916;&amp;#24744;&amp;#24050;&amp;#25104;&amp;#21151;&amp;#20817;&amp;#25442;20&amp;#26465;&amp;#30701;&amp;#20449;&amp;#30005;&amp;#23376;&amp;#28192;&amp;#36947;&amp;#20813;&amp;#36153;&amp;#20307;&amp;#39564;&amp;#21253;&amp;#65288;&amp;#24403;&amp;#26376;&amp;#29983;&amp;#25928;&amp;#65289;&amp;#19994;&amp;#21153;&amp;#65292;&amp;#28040;&amp;#32791;20&amp;#20048;&amp;#35910;&amp;#65292;&amp;#21097;&amp;#20313;95&amp;#20048;&amp;#35910;&amp;#12290;";
+            string data = System.Web.HttpUtility.HtmlDecode(content);
+            data = System.Web.HttpUtility.HtmlDecode(data);
+            string result = ReadContext(data);
+
+        }
+        [TestMethod]
+        public void ShowValue()
+        {
+            string context1 = "&amp;#24456;&amp;#36951;&amp;#25022;&amp;#65292;&amp;#24744;&amp;#30340;&amp;#20048;&amp;#35910;&amp;#19981;&amp;#36275;&amp;#65292;&amp;#19981;&amp;#33021;&amp;#20817;&amp;#25442;&amp;#35813;&amp;#35805;&amp;#36153;&amp;#65292;&amp;#35831;&amp;#20817;&amp;#25442;&amp;#20854;&amp;#23427;&amp;#22870;&amp;#21697;&amp;#25110;&amp;#21442;&amp;#21152;&amp;#25277;&amp;#22870;&amp;#65281;&amp;#36186;&amp;#21462;&amp;#26356;&amp;#22810;&amp;#20048;&amp;#35910;&amp;#21644;&amp;#20048;&amp;#20540;&amp;#35831;&amp;#24744;&amp;#28857;&amp;#20987;&amp;#8220;&amp;#25105;&amp;#30340;&amp;#20219;&amp;#21153;&amp;#8221;&amp;#25353;&amp;#38062;&amp;#65292;&amp;#23436;&amp;#25104;&amp;#26356;&amp;#22810;&amp;#20219;&amp;#21153;&amp;#21487;&amp;#32047;&amp;#35745;&amp;#26356;&amp;#22810;&amp;#20048;&amp;#35910;&amp;#21644;&amp;#20048;&amp;#20540;&amp;#21734;&amp;#65281;";
+
+            string data = System.Web.HttpUtility.HtmlDecode(context1);
+            data = System.Web.HttpUtility.HtmlDecode(data);
+
+            string context2 = "&amp;#24456;&amp;#36951;&amp;#25022;&amp;#65292;&amp;#20817;&amp;#25442;&amp;#22833;&amp;#36133;&amp;#65292;&amp;#20170;&amp;#26085;&amp;#35813;&amp;#22870;&amp;#21697;&amp;#24050;&amp;#34987;&amp;#20817;&amp;#25442;&amp;#23436;&amp;#27605;&amp;#21862;&amp;#65281;";
+            string data1 = System.Web.HttpUtility.HtmlDecode(context2);
+            data1 = System.Web.HttpUtility.HtmlDecode(data1);
+
+        }
+
+        private string ReadContext(string data)
+        {
+
+            StringBuilder text = new StringBuilder();
+            using (Stream reader = new GZipInputStream(new MemoryStream(Encoding.UTF8.GetBytes(System.Web.HttpUtility.HtmlDecode(data)))))
+            {
+                MemoryStream ms = new MemoryStream();
+                int nSize = 4096;
+                byte[] writeData = new byte[nSize];
+                while (true)
+                {
+                    try
+                    {
+                        nSize = reader.Read(writeData, 0,
+nSize);
+                        if (nSize > 0)
+                            ms.Write(writeData, 0,
+nSize);
+                        else
+                            break;
+                    }
+                    catch (GZipException ex)
+                    {
+                        Console.WriteLine(ex);
+                    }
+                }
+                reader.Close();
+                text.Append(Encoding.UTF8.GetString(ms.GetBuffer()));
+            }
+            return text.ToString();
+        }
+
+    }
+}

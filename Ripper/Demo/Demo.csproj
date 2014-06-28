@@ -53,10 +53,17 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CmccForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CmccForm.Designer.cs">
+      <DependentUpon>CmccForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FetionLoginHelper.cs" />
     <Compile Include="FLogin.cs">
       <SubType>Form</SubType>
@@ -82,6 +89,12 @@
     <Compile Include="Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Verify\IVerify.cs" />
@@ -89,6 +102,9 @@
     <Compile Include="Verify\UU\CRC32.cs" />
     <Compile Include="Verify\UU\Wrapper.cs" />
     <Compile Include="WeiBoGrabClass.cs" />
+    <EmbeddedResource Include="CmccForm.resx">
+      <DependentUpon>CmccForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -133,6 +152,12 @@
     <Content Include="Config\号码.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebLoginer\WebLoginer.csproj">
+      <Project>{5af38cb3-4afc-4384-9772-33b0f29a5a98}</Project>
+      <Name>WebLoginer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -15,7 +15,7 @@ namespace WeiBoGrab
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FLogin());
+            Application.Run(new LoginForm());
         }
     }
 }

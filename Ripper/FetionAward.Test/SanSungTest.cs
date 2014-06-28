@@ -32,14 +32,7 @@ namespace FetionAward.Test
 
 
         }
-        public static object DeserializeXML(System.IO.Stream pStream, Type pType)
-        {
-            pStream.Seek(0, System.IO.SeekOrigin.Begin);
-           
-            System.Xml.Serialization.XmlSerializer _xmls = new System.Xml.Serialization.XmlSerializer(null,);
-            object _result = _xmls.Deserialize(pStream);
-            return _result;
-        }
+  
 
         [TestMethod]
         public void CreateRegisterContext()
