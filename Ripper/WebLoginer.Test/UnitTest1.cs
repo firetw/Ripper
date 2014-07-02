@@ -5,6 +5,8 @@ using System.Xml.Linq;
 using System.IO;
 using ICSharpCode.SharpZipLib.GZip;
 using System.Text;
+using System.Threading;
+using System.Text.RegularExpressions;
 
 namespace WebLoginer.Test
 {
@@ -18,8 +20,22 @@ namespace WebLoginer.Test
             context = context.Replace("!", "%21");
 
             Assert.IsTrue(context.IndexOf("!") == -1);
-
         }
+
+
+        [TestMethod]
+        public void RegexTest()
+        {
+            string content = "value=\"123\" id=\"CIFT_MESSAGE\""; //"value=\"&amp;#24456;&amp;#36951;&amp;#25022;&amp;#65292;&amp;#24744;&amp;#26469;&amp;#26202;&amp;#20102;&amp;#65292;&amp;#20170;&amp;#22825;&amp;#30340;&amp;#35805;&amp;#36153;&amp;#24050;&amp;#32463;&amp;#34987;&amp;#25250;&amp;#23436;&amp;#20102;&amp;#65281;&amp;#35831;&amp;#24744;&amp;#20817;&amp;#25442;&amp;#20854;&amp;#23427;&amp;#22870;&amp;#21697;&amp;#25110;&amp;#21442;&amp;#21152;&amp;#25277;&amp;#22870;&amp;#21734;\" id=\"CIFT_MESSAGE\"";
+            Match match = null;
+            if ((match = Regex.Match(content, "value=\"([^\"]*)\" id=\"CIFT_MESSAGE\"")).Success)
+            {
+                Console.WriteLine(match.Groups[1].Value);
+            }
+            string str = System.Web.HttpUtility.HtmlEncode("\"");
+            Console.WriteLine(str);
+        }
+
         [TestMethod]
         public void BuilderCookie()
         {
@@ -77,12 +93,16 @@ namespace WebLoginer.Test
         [TestMethod]
         public void ShowValue()
         {
-            string context1 = "&amp;#24456;&amp;#36951;&amp;#25022;&amp;#65292;&amp;#24744;&amp;#30340;&amp;#20048;&amp;#35910;&amp;#19981;&amp;#36275;&amp;#65292;&amp;#19981;&amp;#33021;&amp;#20817;&amp;#25442;&amp;#35813;&amp;#35805;&amp;#36153;&amp;#65292;&amp;#35831;&amp;#20817;&amp;#25442;&amp;#20854;&amp;#23427;&amp;#22870;&amp;#21697;&amp;#25110;&amp;#21442;&amp;#21152;&amp;#25277;&amp;#22870;&amp;#65281;&amp;#36186;&amp;#21462;&amp;#26356;&amp;#22810;&amp;#20048;&amp;#35910;&amp;#21644;&amp;#20048;&amp;#20540;&amp;#35831;&amp;#24744;&amp;#28857;&amp;#20987;&amp;#8220;&amp;#25105;&amp;#30340;&amp;#20219;&amp;#21153;&amp;#8221;&amp;#25353;&amp;#38062;&amp;#65292;&amp;#23436;&amp;#25104;&amp;#26356;&amp;#22810;&amp;#20219;&amp;#21153;&amp;#21487;&amp;#32047;&amp;#35745;&amp;#26356;&amp;#22810;&amp;#20048;&amp;#35910;&amp;#21644;&amp;#20048;&amp;#20540;&amp;#21734;&amp;#65281;";
+            string context1 = "&amp;#24456;&amp;#36951;&amp;#25022;&amp;#65292;&amp;#20817;&amp;#25442;&amp;#22833;&amp;#36133;&amp;#65292;&amp;#20170;&amp;#26085;&amp;#35813;&amp;#22870;&amp;#21697;&amp;#24050;&amp;#34987;&amp;#20817;&amp;#25442;&amp;#23436;&amp;#27605;&amp;#21862;&amp;#65281;";
+            //int avaiThread = ThreadPool.GetAvailableThreads();
+            int t1 = 0, t2 = 0;
+            ThreadPool.GetMaxThreads(out t1, out t2);
 
+            Console.WriteLine();
             string data = System.Web.HttpUtility.HtmlDecode(context1);
             data = System.Web.HttpUtility.HtmlDecode(data);
 
-            string context2 = "&amp;#24456;&amp;#36951;&amp;#25022;&amp;#65292;&amp;#20817;&amp;#25442;&amp;#22833;&amp;#36133;&amp;#65292;&amp;#20170;&amp;#26085;&amp;#35813;&amp;#22870;&amp;#21697;&amp;#24050;&amp;#34987;&amp;#20817;&amp;#25442;&amp;#23436;&amp;#27605;&amp;#21862;&amp;#65281;";
+            string context2 = "&amp;#24456;&amp;#36951;&amp;#25022;&amp;#65292;&amp;#24744;&amp;#26469;&amp;#26202;&amp;#20102;&amp;#65292;&amp;#20170;&amp;#22825;&amp;#30340;&amp;#35805;&amp;#36153;&amp;#24050;&amp;#32463;&amp;#34987;&amp;#25250;&amp;#23436;&amp;#20102;&amp;#65281;&amp;#35831;&amp;#24744;&amp;#20817;&amp;#25442;&amp;#20854;&amp;#23427;&amp;#22870;&amp;#21697;&amp;#25110;&amp;#21442;&amp;#21152;&amp;#25277;&amp;#22870;&amp;#21734;";
             string data1 = System.Web.HttpUtility.HtmlDecode(context2);
             data1 = System.Web.HttpUtility.HtmlDecode(data1);
 

@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebLoginer", "WebLoginer\We
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebLoginer.Test", "WebLoginer.Test\WebLoginer.Test.csproj", "{545BF2DC-5755-48A5-864C-D5F2473D6B62}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ripper.View", "Ripper.View", "{5924169C-7F42-4297-B6F6-26DA869721B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ripper.View", "Ripper.View\Ripper.View.csproj", "{2F10129A-232B-4A33-9BB2-98554E816433}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +127,16 @@ Global
 		{545BF2DC-5755-48A5-864C-D5F2473D6B62}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{545BF2DC-5755-48A5-864C-D5F2473D6B62}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{545BF2DC-5755-48A5-864C-D5F2473D6B62}.Release|x86.ActiveCfg = Release|Any CPU
+		{2F10129A-232B-4A33-9BB2-98554E816433}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F10129A-232B-4A33-9BB2-98554E816433}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F10129A-232B-4A33-9BB2-98554E816433}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{2F10129A-232B-4A33-9BB2-98554E816433}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{2F10129A-232B-4A33-9BB2-98554E816433}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2F10129A-232B-4A33-9BB2-98554E816433}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F10129A-232B-4A33-9BB2-98554E816433}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F10129A-232B-4A33-9BB2-98554E816433}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{2F10129A-232B-4A33-9BB2-98554E816433}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{2F10129A-232B-4A33-9BB2-98554E816433}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -130,5 +144,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{DD46028F-EFD9-4680-B62F-70EB9D3B093C} = {D7EFD351-E517-4036-AAB5-7D8066854656}
 		{545BF2DC-5755-48A5-864C-D5F2473D6B62} = {D7EFD351-E517-4036-AAB5-7D8066854656}
+		{2F10129A-232B-4A33-9BB2-98554E816433} = {5924169C-7F42-4297-B6F6-26DA869721B6}
 	EndGlobalSection
 EndGlobal
