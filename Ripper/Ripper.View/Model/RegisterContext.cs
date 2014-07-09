@@ -116,6 +116,8 @@ namespace Ripper.View.Model
         }
 
 
+
+
         private class TimeoutHandlerPara
         {
             public string Content;
@@ -138,7 +140,7 @@ namespace Ripper.View.Model
 
     }
 
-    public class Context
+    public class Context : INotifyPropertyChanged
     {
         public Thread CurrentTheread
         {
@@ -148,6 +150,30 @@ namespace Ripper.View.Model
             }
         }
         public TaskStatus Status { get; set; }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+
+        protected void OnPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                System.Threading.Interlocked.Exchange<string>(ref mChangedPropertyName, propertyName);
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
+
+        private string mChangedPropertyName = string.Empty;
+        /// <summary>
+        /// 当前是那个属性值改变
+        /// </summary>
+        public string ChangedPropertyName
+        {
+
+            set { mChangedPropertyName = value; }
+            get { return mChangedPropertyName; }
+        }
     }
     public enum TaskStatus
     {
@@ -272,7 +298,16 @@ namespace Ripper.View.Model
         public string Birthday { get; private set; }
 
 
-
+        private string _registerInfo;
+        public string RegisterInfo
+        {
+            get { return _registerInfo; }
+            set
+            {
+                _registerInfo = value;
+                OnPropertyChanged("RegisterInfo");
+            }
+        }
 
 
         public bool IsNewBroser { get; set; }

@@ -29,8 +29,9 @@
                             <GridViewColumn Header="序号" Width="50"   DisplayMemberBinding="{Binding Seq}"></GridViewColumn>
                             <GridViewColumn Header="手机号" Width="80" DisplayMemberBinding="{Binding Tel}"></GridViewColumn>
                             <GridViewColumn Header="姓名" Width="50" DisplayMemberBinding="{Binding FullName}"></GridViewColumn>
-                            <GridViewColumn Header="姓别" Width="200" DisplayMemberBinding="{Binding GenderTypeCode}"></GridViewColumn>
-                            <GridViewColumn Header="身份证" Width="200" DisplayMemberBinding="{Binding Id}"></GridViewColumn>
+                            <GridViewColumn Header="姓别" Width="50" DisplayMemberBinding="{Binding GenderTypeCode}"></GridViewColumn>
+                            <GridViewColumn Header="身份证" Width="100" DisplayMemberBinding="{Binding Id}"></GridViewColumn>
+                            <GridViewColumn Header="注册结果" Width="100" DisplayMemberBinding="{Binding RegisterInfo}"></GridViewColumn>
                         </GridView.Columns>
                     </GridView>
                 </ListView.View>

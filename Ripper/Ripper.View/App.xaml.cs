@@ -17,6 +17,7 @@ namespace Ripper.View
     /// </summary>
     public partial class App : Application
     {
+        static readonly log4net.ILog _log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private void Application_Startup(object sender, StartupEventArgs e)
         {
             //MainWindow mw = new MainWindow();
@@ -35,11 +36,20 @@ namespace Ripper.View
             //mw.Show();
 
             //SamSung.SamSungRegister register = new SamSung.SamSungRegister();
+
+            Application.Current.DispatcherUnhandledException += Current_DispatcherUnhandledException;
+
             SamSungRegister register = new SamSungRegister();
             register.Show();
 
 
 
+        }
+
+        void Current_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
+        {
+
+            _log.Error(sender.ToString() + "\r\n" + e.Dispatcher.ToString() + "\r\n" + e.Exception);
         }
     }
 

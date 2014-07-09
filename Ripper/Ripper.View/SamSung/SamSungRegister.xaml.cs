@@ -42,6 +42,7 @@ namespace SamSung
         List<RegisterContext> Contexts = new List<RegisterContext>();
         ExecMode _currentMode = ExecMode.FromCurrent;
         Encoding _encode = null;
+        bool _isSmsVerify = false;
 
 
         public SamSungRegister()
@@ -83,6 +84,7 @@ namespace SamSung
 
         void tbImgVerify_TextChanged(object sender, TextChangedEventArgs e)
         {
+            if (!_isSmsVerify) return;
             if (tbImgVerify.Text.Trim().Length != 6) return;
             if (this.cbAutoSubmit.IsChecked.HasValue && this.cbAutoSubmit.IsChecked.Value)
             {
@@ -188,7 +190,9 @@ namespace SamSung
                        bmp.BeginInit();
                        bmp.StreamSource = new MemoryStream(source);
                        bmp.EndInit();
+                       this.imgVerify.BeginInit();
                        this.imgVerify.Source = bmp;
+                       this.imgVerify.EndInit();
                    }
                    catch
                    {
@@ -250,6 +254,7 @@ namespace SamSung
             _task = new RegisterTask();
             _currentConext = context;
             if (_currentConext == null) return;
+            _isSmsVerify = false;
 
             Dispatcher.Invoke(new Action(() =>
             {
@@ -294,7 +299,14 @@ namespace SamSung
             _task.OnImgCompleted -= _task_OnImgCompleted;
             _task.OnImgVerifyCompleted -= _task_OnImgVerifyCompleted;
             _task.OnVerifyCodeFailed -= _task_OnVerifyCodeFailed;
+            _isSmsVerify = false;
 
+            Dispatcher.Invoke(new Action(() =>
+            {
+                if (_currentConext != null)
+                    _currentConext.RegisterInfo = _currentConext.ExecInfo;
+
+            }), null);
 
             switch (_currentMode)
             {
@@ -346,6 +358,10 @@ namespace SamSung
                        _task.OnImgCompleted -= _task_OnImgCompleted;
                        _task.OnImgVerifyCompleted -= _task_OnImgVerifyCompleted;
                        _task.OnVerifyCodeFailed -= _task_OnVerifyCodeFailed;
+                   }
+                   if (message == "短信验证通过")
+                   {
+                       _isSmsVerify = true;
                    }
                }
                ));

@@ -237,6 +237,7 @@ namespace SamSung
                 return;
             }
             _cookies = cookies;
+            _container = container;
             SendSms(container, cookies);
         }
         public string ParserAttachCode(string content)
@@ -552,6 +553,11 @@ _serviceId,
                 Context.ExecInfo = "请输入手机验证码";
                 if (OnGetSmsCompleted != null)
                     OnGetSmsCompleted();
+            }
+            else if (Regex.IsMatch(smsText, "此电话号码已在使用"))
+            {
+                Context.ExecInfo = "此电话号码已在使用";
+                this.IsCompleted = true;
             }
             else
             {
