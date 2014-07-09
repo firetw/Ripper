@@ -7,6 +7,7 @@ using ICSharpCode.SharpZipLib.GZip;
 using System.Text;
 using System.Threading;
 using System.Text.RegularExpressions;
+using System.Collections.Generic;
 
 namespace WebLoginer.Test
 {
@@ -106,6 +107,67 @@ namespace WebLoginer.Test
             string data1 = System.Web.HttpUtility.HtmlDecode(context2);
             data1 = System.Web.HttpUtility.HtmlDecode(data1);
 
+        }
+        [TestMethod]
+        public void GetQuestion()
+        {
+            Match match = null;
+            string e = string.Empty, q = string.Empty;
+            string line = "<option value=\"SS_WHAT_IS_YOUR_ELDEST_COUSINS_FIRST_AND_LAST_NAME_Q\" >您最年长的表亲姓名是什么?</option>";
+            if ((match = Regex.Match(line, "<option value=\"([^\"]*)\"\\s*>([^<]*)</option>", RegexOptions.IgnoreCase)).Success)
+            {
+                e = match.Groups[1].Value;
+                q = match.Groups[2].Value;
+            }
+            Assert.IsTrue(!string.IsNullOrEmpty(e));
+            Assert.IsTrue(!string.IsNullOrEmpty(q));
+        }
+        static List<string> DayOfWeek = new List<string> { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+        static List<string> MonthOfYear = new List<string> { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Aug", "Aug", "Sep", "Oct", "Nov", "Dec" };
+
+        [TestMethod]
+        public void GenerateUrl()
+        {
+            DateTime now = DateTime.Now;
+
+            int month = now.Month;
+            string step1 = string.Format("{0} {1} {2} {3} {4}:{5}:{6} GMT+0800 (中国标准时间)",
+                DayOfWeek[(int)now.DayOfWeek],
+                MonthOfYear[--month],
+                now.Day < 10 ? "0" + now.Day : now.Day.ToString(),
+                now.Year,
+                now.Hour < 10 ? "0" + now.Hour : now.Hour.ToString(),
+                now.Minute < 10 ? "0" + now.Minute : now.Minute.ToString(),
+                now.Second < 10 ? "0" + now.Second : now.Second.ToString());
+            step1 = System.Web.HttpUtility.UrlEncode(step1);
+            step1 = "https://account.samsung.cn/account/find/accountSCaptchaCodeView.do?serviceID=ts3rap101s&captchaGbn=SIGNUP&" + step1;
+            Console.WriteLine(step1);
+
+            Assert.IsNotNull(step1);
+
+        }
+        [TestMethod]
+        public void JudgeGender()
+        {
+            string id1 = "41010319630816131X";
+            Assert.IsTrue(JudgeGender(id1) == "M");
+
+            string id2 = "412924197206153927";
+            Assert.IsTrue(JudgeGender(id2) == "F");
+
+
+            string id3 = "410703199003232013";
+            Assert.IsTrue(JudgeGender(id3) == "M");
+        }
+
+        private string JudgeGender(string id)
+        {
+            int num = Convert.ToInt32(id.Substring(id.Length - 2, 1));
+
+            if (num % 2 == 0)
+                return "F";
+            else
+                return "M";
         }
 
         private string ReadContext(string data)

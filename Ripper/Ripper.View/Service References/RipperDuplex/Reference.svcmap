@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="98b31c12-715c-4cc3-a6aa-ca7d641d003a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8001/Ripper/mex" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="mex.xsd" MetadataType="Schema" ID="4b951f07-0b41-4b1f-a290-34eb8fa6b44e" SourceId="1" SourceUrl="http://localhost:8001/Ripper/mex?xsd=xsd0" />
+    <MetadataFile FileName="mex1.xsd" MetadataType="Schema" ID="a53c5e5c-92d3-4410-aaf3-4ccf2903fdd6" SourceId="1" SourceUrl="http://localhost:8001/Ripper/mex?xsd=xsd1" />
+    <MetadataFile FileName="mex.wsdl" MetadataType="Wsdl" ID="a0c4fcac-a0fa-4296-af7d-7b494c4a568a" SourceId="1" SourceUrl="http://localhost:8001/Ripper/mex?wsdl=wsdl0" />
+    <MetadataFile FileName="RipperService.wsdl" MetadataType="Wsdl" ID="bcbb99de-2258-4ebe-beda-b8a95dd8b976" SourceId="1" SourceUrl="http://localhost:8001/Ripper/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

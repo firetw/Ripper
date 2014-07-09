@@ -1,0 +1,1721 @@
+﻿HTTP/1.1 200 OK
+Date: Mon, 07 Jul 2014 08:11:01 GMT
+Server: PWS/8.0.25
+X-Px: nc h0-s17.p13-pek ( pek-ag7-n3), nc pek-ag7-n3 ( origin)
+P3P: CP='IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT'
+Cache-Control: no-cache, no-store, must-revalidate
+Pragma: no-cache
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Content-Type: text/html; charset=UTF-8
+Content-Language: zh-CN
+Vary: Accept-Encoding
+X-Powered-By: Servlet/2.5 JSP/2.1
+Connection: keep-alive
+Content-Length: 54641
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+	
+	
+	
+	
+		<html xmlns="http://www.w3.org/1999/xhtml" lang="zh" xml:lang="zh" >
+	
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="autocomplete" content="off" />
+<meta name="Description" content="Samsung account" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		
+	
+    
+    
+	    <title>Create a Samsung Account | Samsung Account</title>
+	
+	
+	
+   	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	   
+	
+
+<link rel="shortcut icon" href="https://account.samsung.cn/images/v3/favicon.ico?20140626" />
+
+
+
+<link rel="stylesheet" type="text/css" href="https://account.samsung.cn/css/v3/default.min.css?20140626" />
+
+
+
+	
+	
+		<link rel="stylesheet" type="text/css" href="https://account.samsung.cn/css/tip-yellowsimple.min.css?20140626" />
+	
+
+<link rel="stylesheet" type="text/css" href="https://account.samsung.cn/js/fancybox/jquery.fancybox-1.3.4.css?20140626" />
+
+<script language="javascript" type="text/javascript" src="https://account.samsung.cn/js/IDMCommonUtils.min.js?20140626"></script>
+<script language="javascript" type="text/javascript" src="https://account.samsung.cn/js/fancybox/jquery.fancybox-1.3.4.pack.js?20140626" charset="utf-8"></script>
+<script type="text/javascript">
+//<![CDATA[
+
+var staticCssLocaleURL    = "https://account.samsung.cn";
+var staticImagesLocaleURL = "https://account.samsung.cn";
+var staticJsLocaleURL     = "https://account.samsung.cn";
+
+
+
+
+
+
+//]]>    
+</script>
+
+<script type="text/javascript" src="https://img.content.samsung.com/static/omniture/s_ncomui_code.js"></script>
+<script type="text/javascript"> 
+s_ncomui.pageName = "cn:pc:gnb:account:main";
+if(!s_ncomui.campaign) s_ncomui.campaign="_"+s_ncomui.getQueryParam('cid');
+s_ncomui.t();
+</script>
+
+</head>
+<body id="bdTypeA">
+
+
+
+
+
+<p class="hide"><a href="#Container">Go to Content</a></p>
+<hr />
+<div id="head">
+	<div class="top">
+		<p class="Logo"><a href="https://account.samsung.com/membership"><img src="https://account.samsung.cn/images/v3/layout/logo.jpg" alt="三星账户"  /></a>
+			
+		 </p>
+	</div>
+</div>
+<hr />
+
+	<!-- section -->	
+	<div id="Container">
+	<form id="signUpForm" name="signUpForm" action="" method="post">
+    	
+
+	
+		<input type="hidden" name="serviceID" value="ts3rap101s" />
+	
+	
+
+		<div id="content-area">
+			<!-- Type box ??? ?? 960px -->		
+			<div id="contentType">		
+			 	
+                  
+					
+						
+							
+							<p class="joinStep"><img src="https://account.samsung.cn/images/v3/step/ico_step2_cn.gif" alt="" /></p>
+						
+					
+					
+				  	
+				
+				<table class="btnAlignT2">
+					<tr>
+						<td class="left"><h1>创建帐号</h1></td>
+						<td class="right" id="moveSignInMsg">已经有三星帐号? &nbsp;&nbsp;<strong><a href="/account/signIn.do?serviceID=ts3rap101s">登录</a></strong></td>
+					</tr>
+				</table>
+		        
+		        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+		
+			
+				
+				
+				
+			
+			
+		
+		
+			
+			
+		
+		
+		
+		
+        
+	        
+		        
+		        
+		        
+		        
+		        
+	        
+	        
+        
+        
+        
+        
+        
+        
+		
+        <input type="hidden" id="separatorName" name="separatorName" value="JoinNow" />
+        
+        
+        
+        
+        
+          
+          
+          	
+          
+        
+        
+        
+        
+        
+		<table id="basicInputArea" class="tbrViewC" summary="Enter the basic information about email, password, birthday and so on">
+			<caption>Enter basic information</caption>
+			<colgroup><col width="20%" /><col width="80%" /></colgroup>
+			<thead>
+				
+				<tr>
+					<th colspan="2" class="reqfiled"><span class="pCor" title="required fields">*</span>必填字段</th>
+				</tr>
+			</thead>
+			<tbody>
+				
+					
+                      	
+                      	
+				            <tr id="titleTR">
+								<th scope="row"><label class="iLabel" for="loginIDTypeCode">ID 类型</label></th>
+								<td>
+									<input name="loginIDTypeCode" id="loginIDTypeCode003" type="radio" value="003" checked /> <label for="loginIDTypeCode003">电子邮件地址</label>
+									&nbsp;&nbsp;&nbsp;&nbsp;
+									<input name="loginIDTypeCode" id="loginIDTypeCode001" type="radio" value="001" /> <label for="loginIDTypeCode001">手机号码</label>
+								</td>
+							</tr>
+                      	
+						<tr id="inputEmailIDArea">
+							<th scope="row"><label class="iLabel" for="jXeEK0fmWkinputEmailID"><span class='pCor' title='required fields'>*</span>邮件地址</label></th>
+							<td><input name="jXeEK0fmWkinputEmailID" type="text" id="jXeEK0fmWkinputEmailID" value="" class="inputTypeA" maxlength="50" /></td>
+						</tr>
+						
+							
+								<tr id="inputPhoneIDArea" style="display:none;">
+									<th scope="row"><label class="iLabel" for="jXeEK0fmWkinputPhoneID"><span class='pCor' title='required fields'>*</span>手机号码</label></th>
+									<td><input name="jXeEK0fmWkinputPhoneID" type="text" id="jXeEK0fmWkinputPhoneID" value="" class="inputTypeA" maxlength="50" readonly style="cursor:pointer;" onclick="$j('.verifyPhoneID').trigger('click');" /> <span class="btnTypeC"><a href="/account/verifyPhoneID.do?serviceID=ts3rap101s" class="verifyPhoneID">验证</a></span></td>
+								</tr>
+							
+							
+						
+						<tr>
+							<th scope="row"><label class="iLabel" for="jXeEK0fmWkinputPassword"><span class='pCor' title='required fields'>*</span>密码</label></th>
+							<td>
+								
+									
+									
+										<table>
+											<tr>
+												<td><input name="jXeEK0fmWkinputPassword" type="password" id="jXeEK0fmWkinputPassword" class="inputTypeA" maxlength="15" /><span id="passwordStrengthLabel"></span></td>
+												<td class="msgTxtr"><a id="msgPwdResions" href="#" class="img_btn"><img src="https://account.samsung.cn/images/v3/icon/icn_q.gif" alt="How to make password" /></a></td>
+											</tr>
+										</table>
+									
+								
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label class="iLabel" for="jXeEK0fmWkreInputPassword"><span class='pCor' title='required fields'>*</span>确认密码</label></th>
+							<td><input name="jXeEK0fmWkreInputPassword" type="password" id="jXeEK0fmWkreInputPassword" class="inputTypeA" maxlength="15" /></td>
+						</tr>
+					
+	            	
+	            
+	            
+					
+						
+						
+						
+							<input type="hidden" id="title" name="title" value="" />
+							<input type="hidden" id="genderTypeCode" name="genderTypeCode" value="F" />
+						
+					
+					
+					
+						
+						
+							<tr id="firstNameTR">
+								<input type="hidden" name="firstName" id="firstName" value="梦婉" />
+								<input type="hidden" name="lastName" id="lastName" value="王" />
+								<th scope="row"><label class="iLabel" for="firstName">名字</label></th>
+								<td>梦婉</td>
+							</tr>
+							<tr id="lastNameTR">
+								<th scope="row"><label class="iLabel" for="lastName">姓氏</label></th>
+								<td>王</td>
+							</tr>
+						
+						
+					
+					<input type="hidden" id="nickName" name="nickName" value="" />
+					
+				
+					
+						<input type="hidden" id="nationality" name="nationality" value="CHN" />
+					
+					
+				
+	            
+	            <input type="hidden" id="curTPcnty" value="" />
+	            <tr id="birthDateTR">
+	                
+	                
+	                
+					
+						
+							<th scope="row"><label class="iLabel">生日</label></th>
+							<td >
+                                1989-09-09
+                                <input type="hidden" id="dd" name="dd" value="09" />
+                                <input type="hidden" id="mm" name="mm" value="09" />
+                                <input type="hidden" id="yyyy" name="yyyy" value="1989" />
+                                
+                                </td>
+						
+						
+					
+	                <input type="hidden" id="birthDate" name="birthDate" value="19890909" />
+	            </tr>
+	            
+		        
+		        
+					<tr id="securityQuestionIDArea" style="display:none;">
+						<th scope="row"><label class="iLabel" for="securityQuestionID"><span class='pCor' title='required fields'>*</span>安全问题</label></th>
+						<td>
+							<select id="securityQuestionID" name="securityQuestionID" class="selectTypeA" title="" style="width:350px;">
+								<option value="">请选择</option>
+								
+									<option value="SS_WHAT_IS_THE_NAME_OF_YOUR_2ND_BEST_FRIEND_Q_ABB" >您第二要好的朋友叫什么名字?</option>
+								
+									<option value="SS_WHAT_IS_THE_BEST_GIFT_YOU_HAVE_EVER_GIVEN_Q_ABB" >您曾收到过的最好礼物是什么?</option>
+								
+									<option value="SS_WHAT_IS_YOUR_FATHERS_MIDDLE_NAME_Q" >您父亲的中间名字是什么?</option>
+								
+									<option value="SS_WHERE_IS_YOUR_FAVOURITE_HOLIDAY_LOCATION_Q_ABB" >您最喜欢的度假地点在哪里?</option>
+								
+									<option value="SS_WHAT_IS_YOUR_FAVOURITE_BOOK_Q_ABB" >您最喜欢的书是什么?</option>
+								
+							</select>
+						</td>
+					</tr>
+					<tr id="securityAnswerArea" style="display:none;">
+						<th scope="row"><label class="iLabel" for="securityAnswer"><span class='pCor' title='required fields'>*</span>安全答案</label></th>
+						<td><input name="securityAnswer" id="securityAnswer" type="text" value="" class="inputTypeA" maxlength="50" style="width:328px;" /></td>
+					</tr>
+		        
+	        	
+					<tr id="chinesePhoneNumberTR">
+                    	<th scope="row"><label class="iLabel" for="phoneNumber">手机号码</label></th>
+                        <td><input name="phoneNumber" id="phoneNumber" value="" maxlength="50" type="text" class="inputTypeA"    /></td>
+					</tr>
+		        
+		        
+		        	
+		        	
+				        <tr>
+							<th scope="row"><label class="iLabel" for="inputCaptchaCode"><span class='pCor' title='required fields'>*</span>安全验证码</label></th>
+							<td>
+								
+									
+									
+										<img id="inputCaptchaCodeImg" src="/account/find/accountSCaptchaCodeView.do?serviceID=ts3rap101s&captchaGbn=SIGNUP" width="300" height="57" alt="Security Code" /><br />
+									
+								
+								<a href="javascript:goTryNewCode();">尝试新代码</a>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">&nbsp;</th>
+							<td><input name="inputCaptchaCode" type="text" id="inputCaptchaCode" value="" class="inputTypeA" maxlength="50" /></td>
+						</tr>
+		        	
+		        
+		        <tr id="newsLetterTR">
+					<th scope="row"><label class="iLabel" for="newsLetter">首选联系方式</label></th>
+                       <td>
+						<dl class="rbChechk">
+							<dt>
+								<input name="newsLetter" id="newsLetter" type="checkbox" value="Y" checked="checked" />
+								
+							</dt>
+                           	<dd><label class="txtLabel" for="newsLetter">三星服务更新:三星服务和营销信息，包括有关新产品或 Web 服务的通知、特价优惠、活动和新闻通讯。</label>
+                           		<input type="hidden" id="smsReceiveYNFlag" name="smsReceiveYNFlag" value="" /></dd>
+                    	</dl>
+                   	</td>		                                		            		            
+				</tr>
+			</tbody>
+		</table>
+		
+		
+		
+		<table id="addInputArea" class="tbrViewC" summary="Enter the additional information about address, phone number and so on">
+			<caption>Enter additional information</caption>
+			<colgroup><col width="20%" /><col width="80%" /></colgroup>
+			<tbody>	
+							   
+				
+			    
+			    
+			    
+			    
+			   	
+                
+                
+                
+                 	
+					
+						
+					    	<tr style="display:none;" id="postalCodeTR" >
+					           	<th scope="row"><label id="postalCodeLabel" class="iLabel" for="postalCode">邮政编码</label></th>
+					            <td><input name="postalCode" id="postalCode" value="" maxlength="20" type="text"   class="inputTypeA" /></td>
+					        </tr>
+		                
+		                
+					
+			   
+			
+			</tbody>
+		</table>
+		
+		
+		
+		
+			<table id="termsInputArea" class="tbrViewC" summary="条款和条件/隐私权政策">
+				<caption>条款和条件/隐私权政策</caption>
+				<colgroup><col width="20%" /><col width="80%" /></colgroup>
+				<tbody>
+					<tr>
+						<th scope="row"></th>
+						<td>
+							
+	                    	<dl class="rbChechk">
+	                    		<dt><input id="checkTerms" name="checkTerms" value="Y" type="checkbox" class="iCheck" /></dt>
+	                    		<dd>
+	                    			
+	                    			<label for="checkTerms">我已阅读并同意这些<a href="/account/popupLegal.do?serviceID=ts3rap101s&type=terms" heights="450" class="popupLegalLayer">条款和条件</a>。</label>
+	                    		</dd>
+	                    	</dl>
+	                    	<dl class="rbChechk">
+	                    		<dt><input id="checkPdu" name="checkPdu" value="Y" type="checkbox" class="iCheck" /></dt>
+	                    		<dd>
+	                    			
+	                    			<label for="checkPdu">我确认我的信息将按照 <a href="/account/popupLegal.do?serviceID=ts3rap101s&type=privacy" heights="450" class="popupLegalLayer">Samsung 隐私策略</a>进行处理。</label>
+	                    		</dd>
+	                    	</dl>
+	                    	<dl class="rbChechk">
+	                    		<dt><input id="checkDca" name="checkDca" value="Y" type="checkbox" class="iCheck" /></dt>
+	                    		<dd>
+	                    			<label for="checkDca">我已阅读并同意<a href="/account/popupLegal.do?serviceID=ts3rap101s&type=data-combination" heights="450" class="popupLegalLayer">数据整理策略</a>，同时愿意接收自定义服务。</label>
+	                    		</dd>
+	                    	</dl>
+	                    	
+	                    	<dl class="rbChechk">
+	                    		<dt><input id="check3rdParty" name="check3rdParty" value="Y" type="checkbox" class="iCheck" /></dt>
+	                    		<dd>
+	                    			<label for="check3rdParty">本人认真阅读<a href="/account/popupLegal.do?serviceID=ts3rap101s&type=to3rdparty" heights="450" class="popupLegalLayer">个人信息提供给第三方条款</a>并同意此条款。 </label>
+	                    		</dd>
+	                    	</dl>
+	                    	
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		
+		
+		<div class="btnAlignC">
+			
+				<span class="btnTypeB"><input type="button" id="btnCancel" value="取消" title="Go back to service" /></span>
+			
+			<span class="btnTypeA"><input type="submit" value="继续" /></span>			
+		</div>
+
+    
+
+<script type="text/javascript">
+//<![CDATA[
+
+var inputEmailIDExFormat = /^[a-zA-Z0-9]+([a-zA-Z0-9\-_\.])*([\.])*@[a-zA-Z0-9]+(\-[a-zA-Z0-9]+)*(\.[a-zA-Z0-9]+(\-[a-zA-Z0-9]+)*)*\.[a-zA-Z]{2,4}$/;
+           
+$j(document).ready( function() {
+	$j("a.popupLegalLayer").each(function() {
+		var dHeight = parseInt($j(this).attr("heights"));
+		$j(this).fancybox({
+			'titleShow'			: false,
+			'enableEscapeButton': false,
+			'showCloseButton'   : false,
+			'width'				: 800,
+			'height'			: dHeight,
+			'autoScale'			: false,
+			'transitionIn'		: 'none',
+			'transitionOut'		: 'none',
+			'type'				: 'iframe',
+			'hideOnOverlayClick': false,
+			'scrolling'         : 'no',
+			'centerOnScroll'    : true
+		});
+	});
+	
+	
+		$j("input[name*='loginIDTypeCode']").change(function() {
+			if ( this.id=='loginIDTypeCode001' ) {
+				$j("#inputEmailIDArea").hide();
+				$j("#inputPhoneIDArea").show();
+				$j("#securityQuestionIDArea").show();
+				$j("#securityAnswerArea").show();
+				$j("#chinesePhoneNumberTR").hide();
+			} else {
+				$j("#inputEmailIDArea").show();
+				$j("#inputPhoneIDArea").hide();
+				$j("#securityQuestionIDArea").hide();
+				$j("#securityAnswerArea").hide();
+				$j("#chinesePhoneNumberTR").show();
+			}
+	    });
+	
+	
+	
+		$j('.verifyPhoneID').fancybox({
+			
+			'titleShow'			: false,
+			'enableEscapeButton': false,
+			'showCloseButton'   : true,
+			'width'				: 600,
+			'height'			: 500,
+			'autoScale'			: false,
+			'transitionIn'		: 'none',
+			'transitionOut'		: 'none',
+			'type'				: 'iframe',
+			'hideOnOverlayClick': false,
+			'scrolling'         : 'no',
+			'centerOnScroll'    : true
+		});
+		
+		
+		
+	 	
+
+	 	
+	
+
+	
+		$j("#btnCancel").bind("click", function(){
+			location.href = 'http://content.samsung.cn/cn/main.do';
+		});
+	
+	
+
+	$j("#checkTerms, #checkPdu").bind("click", function(){
+		if ( $j(this).is(":checked") ) {
+			//$j('#checkTerms').removeClass("error");
+			if ( $j('label[for='+$j(this).attr('id')+'][class=error]').length > 0 ) {
+				$j('label[for='+$j(this).attr('id')+'][class=error]').remove();
+				$j(this).removeClass("error");
+				$j(this).attr("title", "");
+			}
+		}
+	});
+	
+	
+	
+		
+		$j('#firstNameTR').before($j('#lastNameTR'));
+		
+			if ( $j('#mm').length > 0 ) {
+				
+				$j($j('#mm')).before($j('#yyyy'));
+				$j($j('#mm')).after($j('#dd'));
+				$j($j('#mm')).before("\n").after("\n");
+			}
+		
+	
+
+    
+    $j.validator.addMethod("customInputEmailID", function( value, element ) {
+    	
+        return ( value.search(inputEmailIDExFormat) != -1 );
+    }, "请输入有效的电子邮件");
+	
+    
+		
+	    $j("#jXeEK0fmWkinputEmailID").blur(checkInputInputEmailID);
+    
+
+	
+	
+	     
+		 	
+		    
+		  
+		
+	
+	
+    
+        
+        
+        
+	    	
+	    	$j("#nationality").blur(function() {
+	    		if ( $j(this).val()=='USA' ) {
+		    		
+		    			
+			    			$j('#birthDateTR').after($j('#postalCodeTR'));
+			    			$j("#postalCodeTR > th > #postalCodeLabel").html("<span class='pCor' title='required fields'>*</span>"+$j("#postalCodeTR > th > #postalCodeLabel").html()+"");
+			    			$j('#postalCodeTR').show();
+		    			
+		    			
+	    			
+	    			$j("#postalCode").attr('maxlength', '5');
+	    		    $j("#postalCode").numeric();
+	    		    $j("#postalCode").css("ime-mode","disabled");
+	    		    $j("#postalCode").bind('keydown', keyCodeNumberOnly);
+	    		} else {
+	    			if ( $j('#postalCode').val()=='' ) {
+	        			$j('#postalCodeTR').hide();
+	        		}
+	    		}
+	    	}).trigger('blur');
+        
+    
+
+	
+    
+    
+    var isExistAddInput = false;
+    if ( $j("#addInputArea tbody").length>0 ) {
+    	var addInputAreaTbodyEles = $j("#addInputArea tbody");
+    	var addInputAreaTrLength = addInputAreaTbodyEles.children().length;
+    	for (var i=0; i<addInputAreaTrLength; i++) {
+    		if ( addInputAreaTbodyEles.children($j("tr")).css("display")!="none" ) {
+    			isExistAddInput = true;
+    			break;
+    		}
+    	}
+    }
+    if ( isExistAddInput==false ) {
+    	$j("#addInputArea").hide();
+    }
+    
+    
+    
+    $j("#jXeEK0fmWkinputPassword"  ).bind("contextmenu",function(e){ return false; });
+    $j("#jXeEK0fmWkreInputPassword").bind("contextmenu",function(e){ return false; });
+    
+    $j("#jXeEK0fmWkinputPassword"  ).bind('keydown', 'Ctrl+c', function(e){ return false; }).bind('keydown', 'Ctrl+v', function(e){ return false; });
+    $j("#jXeEK0fmWkreInputPassword").bind('keydown', 'Ctrl+c', function(e){ return false; }).bind('keydown', 'Ctrl+v', function(e){ return false; });
+
+    $j('#passwordStrengthLabel').hide();
+
+    var settingsPasswordStrength = {
+        'container' : "#passwordStrengthLabel",
+        'minLength' : 8,
+        'texts' : {
+            1 : '太弱',
+            2 : '弱密码',
+            3 : '普通密码',
+            4 : '强密码',
+            5 : '非常强大的密码'
+        },
+        'onCheck': null
+    };
+    
+    $j('#signUpForm').attr('autocomplete', 'off');
+    $j('#jXeEK0fmWkinputPassword').password_strength(settingsPasswordStrength);
+    
+    $j('#jXeEK0fmWkinputPassword').poshytip({
+        className: 'tip-yellowsimple',
+        content: '检查您的密码强度',
+        showOn: 'none',
+        alignTo: 'target',
+        
+	    	
+	    	alignX: 'right',
+	    
+        alignY: 'center',
+        offsetX: 5
+    });
+
+    $j('#jXeEK0fmWkinputPassword').focus(function() { window.setTimeout(function() { $j('#jXeEK0fmWkinputPassword').poshytip('show'); }, 1); }).blur(function() { $j(this).poshytip('hide'); });
+    $j('#jXeEK0fmWkinputPassword').keyup(function() { $j(this).poshytip('update', ($j('#passwordStrengthLabel').text()=='')?"检查您的密码强度":$j('#passwordStrengthLabel').text() ); });
+
+    
+    
+    
+    
+
+    
+    
+    $j('#msgBirthAskReasons').poshytip({
+        className: 'tip-yellowsimple',
+		content: function() {
+			return $j('#birthAskReasons').parent().html();
+		},
+        alignTo: 'target',
+        
+	    	
+	    	alignX: 'right',
+	    
+        alignY: 'center',
+        offsetX: 5
+	});
+	
+    $j('#msgPwdResions').poshytip({
+        className: 'tip-yellowsimple',
+		content: '密码长度必须为 8 到 15 个字符，包括字母、数字和特殊字符。此外，还不能使用 3 个或以上的重复字符或连续字符，或者您的整个或部分电子邮件地址。请定期更改您的密码，以保护您的个人信息。',
+        alignTo: 'target',
+        
+	    	
+	    	alignX: 'right',
+	    
+        alignY: 'center',
+        offsetX: 5
+	});
+	
+
+    
+    
+    $j.validator.addMethod("customPassword", function( value, element ) {
+    	return isCustomPassword(value);
+    }, "可以使用的唯一特殊字符是默认提供的字符。");
+    
+    
+    $j.validator.addMethod("customMixPassword", function( value, element ) {
+    	return isCustomMixPassword(value);
+    }, "密码必须组合字母、数字和特殊字符。");
+    
+    
+    $j.validator.addMethod("customSameEmailPassword", function( value, element ) {
+    	return isCustomSameEmailPassword($j('#jXeEK0fmWkinputEmailID').val(), value);
+    }, "请不要使用与您的电子邮件相同的字词。");
+    
+    
+    $j.validator.addMethod("customSameCharPassword", function( value, element ) {
+    	return isCustomSameCharPassword(value);
+    }, "密码不能包含连续的 3 个相同字符，如 111、aaa、###.");
+    
+    
+    $j.validator.addMethod("customAscDescPassword", function( value, element ) {
+    	return isCustomAscDescPassword(value);
+    }, "密码不能包含 3 个有序的字符，如 123、321.");
+    
+
+    
+    $j.validator.addMethod("customBirthDate", function( value, element ) {
+    	return customBirthDateCheck(value, element);
+    }, "");
+
+    
+    $j.validator.addMethod("nationalPostalCodeChk", function( value, element ) {
+    	if ( $j("#nationality").val()=='USA' && $j.trim($j("#postalCode").val()).length<=0 ) {
+    		return false;
+        } else {
+        	return true;
+        }
+    });
+    
+	
+    $j("#signUpForm").validate({
+    	//debug: false,
+    	//onsubmit: false,
+    	//onfocusout: false,
+    	//onkeyup: false,
+    	onclick: false,
+    	//focusInvalid: false,
+        rules: {
+            
+                
+                	jXeEK0fmWkinputEmailID : {
+                        required    : true,
+                        customInputEmailID: true,
+                        minlength   : 5,
+                        maxlength   : 50
+                    },
+                   	
+                   		inputCaptchaCode : {
+	                        required:true,
+	                        minlength:1,
+	                        maxlength:50
+	                    },
+                   	
+	                
+	                	jXeEK0fmWkinputPhoneID : "required",
+	                
+	                jXeEK0fmWkinputPassword : {
+                        required        : true,
+                        minlength       : 8,
+                        maxlength       : 15,
+                        customPassword  : true,
+                        customMixPassword : true,
+                        customSameEmailPassword: true,
+                        customSameCharPassword: true,
+                        customAscDescPassword : true
+                    },
+                    jXeEK0fmWkreInputPassword : {
+                        required    : true,
+                        equalTo     : "#jXeEK0fmWkinputPassword"
+                    },
+                
+                                
+            
+            
+                
+                
+                
+                
+            
+            
+           	firstName   : "required",
+        	lastName    : "required",
+        	
+            dd   : {
+            	customBirthDate : true
+            },
+            mm   : {
+            	customBirthDate : true
+            },
+            yyyy : {
+            	customBirthDate : true
+            },
+
+            securityQuestionID : "required",
+            securityAnswer     : "required",
+            
+            
+            
+	            
+            	
+		        
+		        
+			        
+		            postalCode : {
+		            	nationalPostalCodeChk : {
+			            	depends: function(element) {
+				                return ($j("#nationality").val()=="USA");
+				            }
+		            	},
+		            	minlength : {
+		                	param : 5,
+		            		depends: function(element) {
+				                return ($j("#nationality").val()=="USA");
+				            }
+		            	},
+		            	maxlength : {
+		                	param : 5,
+		               		depends: function(element) {
+		   		                return ($j("#nationality").val()=="USA");
+		   		            }
+		                }
+		            },
+		        
+		    
+		    
+		    
+		    	checkTerms : "required",
+		    	checkPdu : "required",
+		    
+		    
+		    serviceID : "required"
+        },
+       
+        messages: {
+        	jXeEK0fmWkinputEmailID : {
+                required    : "请输入所需电子邮件",
+                email       : "请输入有效的电子邮件",
+                minlength   : "请输入有效的电子邮件",
+                maxlength   : "请输入有效的电子邮件"
+            },
+            
+            	jXeEK0fmWkinputPhoneID : "请输入电话号码。",
+	        
+            
+            	inputCaptchaCode : "请输入安全验证码",
+            
+            jXeEK0fmWkinputPassword : {
+                required        : "请输入所需密码",
+                minlength       : "密码长度为8-15个字符，需包括字母、数字及符号。",
+                maxlength       : "密码长度为8-15个字符，需包括字母、数字及符号。",
+                customPassword  : "可以使用的唯一特殊字符是默认提供的字符。"
+            },
+            jXeEK0fmWkreInputPassword : {
+                required    : "请重新确认您的密码",
+                equalTo     : "密码不匹配"
+            },
+            checkTerms      : "请同意这些条款和条件",
+            checkPdu      : "请同意该隐私策略。",
+            firstName	    : "请输入您的名字",
+            lastName		: "请输入您的姓氏",
+            dd				: "请输入您的生日",
+            mm				: "请输入您的生日",
+            yyyy			: "请输入您的生日",
+            securityQuestionID: "请选择安全问题。",
+            securityAnswer	  : "请输入安全答案。",
+            postalCode : {
+            	nationalPostalCodeChk : "Please enter your ZIP Code.",
+            	minlength : "Your ZIP code must contain 5 numeric characters.",
+            	maxlength : "Your ZIP code must contain 5 numeric characters."
+            },
+            
+            
+                
+                
+                
+                
+                           
+            serviceID : "required"
+        },
+        groups: {
+        	birthDateCombo: "dd mm yyyy"
+        },
+        errorPlacement: function(error, element) {
+        	//console.log("error["+error.html()+"] element["+element.attr('id')+"]");
+        	if ( element.attr('id')=='jXeEK0fmWkinputEmailID' || element.attr('id')=='inputCaptchaCode' 
+            	|| element.attr('id')=='jXeEK0fmWkinputPassword' || element.attr('id')=='jXeEK0fmWkreInputPassword' 
+            	|| element.attr('id')=='firstName' || element.attr('id')=='lastName' 
+                || element.attr('id')=='securityQuestionID' || element.attr('id')=='securityAnswer' || element.attr('id')=='postalCode' ) {
+            	error.insertAfter(element);
+            	element.attr("title", error.html());
+            	error.attr("alt", error.html());
+            	
+        	} else if ( element.attr('id')=='jXeEK0fmWkinputPhoneID' ) {
+            	error.insertAfter(element.next());
+            	element.attr("title", error.html());
+            	error.attr("alt", error.html());
+        		
+        	} else if ( element.attr('id')=='yyyy' || element.attr('id')=='mm' || element.attr('id')=='dd' ) {
+        		//console.log("error["+error.html()+"] element["+element.attr('id')+"] customBirthDateCheckErrMsg["+customBirthDateCheckErrMsg+"]");
+        		$j("#customBirthDateCheckErrMsgArea").html(customBirthDateCheckErrMsg);
+            	element.attr("title", error.html());
+            	error.attr("alt", error.html());
+           		
+        	} else if ( element.attr('id') == 'checkTerms' || element.attr('id') == 'checkPdu' ) {
+            	error.insertAfter(element.parent().parent());
+           	
+           		
+           		
+           		
+                
+                
+            
+	        	element.attr("title", error.html());
+	        	error.attr("alt", error.html());
+	        	
+            } else {
+            	return true;
+            }
+        },
+        success: function(label) {
+        	//console.log("label["+label+"] element["+label.attr('for')+"] 2element["+$j("#"+label.attr('for')).is(":checked")+"]");
+        	//$j(label).siblings("input, select").attr("title", "");
+        	$j("#"+label.attr('for')).attr("title", "");
+        },
+        submitHandler: function(form) {
+        	
+            if ( $j("#birthDate").data("isAgeLimit")!=false ) {
+            	if ( $j('#mm').length > 0 ) {
+                    
+                    $j("#birthDate").val($j("#yyyy").val() + $j("#mm").val() + $j("#dd").val());
+            	}
+                
+            	if ( $j("#birthDate").val().length<8 ) {
+                    $j('#msgBirthAskReasons').focus();
+                    window.setTimeout(function() { $j('#msgBirthAskReasons').poshytip('show'); }, 1);
+                    return;
+                }
+                
+            	$j("#checkDca").val( ( $j("input:checkbox[name='checkDca']").is(":checked") ? "Y" : "N" ) );
+                
+                
+                checkInputBasicInfo();
+            }
+        }
+    });
+   
+    
+
+	$j(".weiboLogin").click(function() {
+		window.open("/account/weiboSignIn.do?serviceID=ts3rap101s", "sns");
+		return false;
+	});
+	
+	
+		
+		
+		
+	
+	
+	$j(".verifyPhoneIDKoreaNormal").click(function() {
+		showVerifyPhoneInformation();
+		return false;
+	});
+
+	
+	fnSetEleValue(document.signUpForm, 'pewlfv', 'vonhwg');fnSetEleValue(document.signUpForm, 'bgyeih', "umntki");
+	
+});
+
+
+
+function goTryNewCode() {
+	
+		
+		
+		
+		
+	        $j('#inputCaptchaCodeImg').attr("src",("/account/find/accountSCaptchaCodeView.do?serviceID=ts3rap101s&captchaGbn=SIGNUP&"+new Date()));
+		
+	
+}
+function checkInputCaptchaCode() {
+	
+	if ( $j('#inputCaptchaCode').val()=='' ) {
+        $j('#inputCaptchaCode').addClass("error");
+        var strLabel = "<label for='inputCaptchaCode' generated='true' class='error'>请输入安全验证码</label>";
+        if ( $j("#inputCaptchaCode").next().attr('for')=='inputCaptchaCode' ) {
+        	$j("#inputCaptchaCode").next().replaceWith(strLabel);
+        } else {
+        	$j(strLabel).insertAfter($j("#inputCaptchaCode"));
+        }
+		return false;
+	}
+	
+	return true;
+}
+
+
+function checkInputBasicInfo() {
+	if ( checkInputCaptchaCode()!=true ) {
+		return;
+	}
+    var url = '/account/checkInputBasicInfo.do';
+    var parameter = $j('#signUpForm').serialize();
+
+    $j.ajax({
+        type : "POST",
+		url : url,
+		data : parameter,
+		dataType : "json",
+		error : function(request, status, error) {
+	    	
+		    	
+		    	
+		    		idmMsgLayerAlertClose("很抱歉，处理您请求的页面时发生错误。<br />请稍后重试 。", false);
+		    	
+		    
+    	},
+		success : function(jsonData) {
+	        var chkResult = true;
+	        var f = document.signUpForm;
+
+	        
+	            
+		        	if ( $j("#loginIDTypeCode001").is(":checked") ) {
+		        		$j('#jXeEK0fmWkinputEmailID').val("");
+		        	} else {
+		        		$j('#jXeEK0fmWkinputPhoneID').val("");
+		        	}
+		        
+	        
+	        
+	        
+	            if ( setDisplayInputInputEmailID(jsonData)==false ) {
+	                
+	                chkResult = false;
+	            }
+	        
+
+	        if ( setDisplayInputPostalCode(jsonData)==false ) {
+	            
+	            chkResult = false;
+	        }
+
+	        if ( chkResult ) {
+	            
+	                
+	                	
+	                	
+	                		
+	                		f.action = "/account/doSignUp.do";
+	                	
+	                
+	                
+	                
+	                
+	                
+	                
+	            
+	            if ( $j(f).data("isSubmited")!=true ) {
+	                $j(f).data("isSubmited", true);
+	                f.submit();
+	            }
+	        }
+		},
+		async : false
+    });
+    
+}
+
+function setVerifyPhoneID(verifyPhoneID) {
+	$j('#jXeEK0fmWkinputPhoneID').show();
+	$j('#jXeEK0fmWkinputPhoneID').val(verifyPhoneID);
+	$j('#jXeEK0fmWkinputPhoneID').css("border", "0px");
+	$j('#jXeEK0fmWkinputPhoneID').removeClass("error");
+	if ( $j('label[for=jXeEK0fmWkinputPhoneID][class=error]').length > 0 ) {
+		$j('label[for=jXeEK0fmWkinputPhoneID][class=error]').remove();
+	}
+	/*  */
+	$j('.verifyPhoneID').html('更改电话号码');
+	$j("#securityQuestionIDArea").show();
+	$j("#securityAnswerArea").show();
+	$j.fancybox.close();
+	if ( verifyPhoneID != "" && "" != "" && $j("#jXeEK0fmWkinputPhoneID").val() != "" ) {
+		$j("#idmMsgLayer > div.top > h1").html("电话号码 ID 已更改。");
+		idmMsgLayerAlertClose("保存经过更改的信息之后，您就可以使用已验证的电话号码作为 ID。<br />如果您已从平板电脑或手机登录，则必须先注销以重设帐户信息，然后再重新登录。", false);
+	}
+}
+function setPhoneIDDisabled() {
+	$j("input[name*='loginIDTypeCode'][value='003']").attr('checked', true).trigger('change');
+	$j('#jXeEK0fmWkinputPhoneID').val("");
+	$j('#jXeEK0fmWkinputPhoneID').removeClass("error");
+	$j("#loginIDTypeCode001").attr("disabled", true);
+}
+
+
+function checkInputInputEmailID() {
+	
+	//console.log("START!!! checkInputInputEmailID");
+	if ( $j("#inputCaptchaCode").length<=0 || $j("#inputCaptchaCode").val()!="" ) {
+		
+	    if ( $j('#jXeEK0fmWkinputEmailID').val().search(inputEmailIDExFormat) != -1 ) {
+	        var url = '/account/checkInputBasicInfo.do';
+	        var parameter = $j('#signUpForm').serialize();
+	        //$j.post(url, "checkInputBasicInfoGbn=inputEmailID&"+parameter, function(jsonData){
+	        //    setDisplayInputInputEmailID(jsonData);
+	        //}, "json");
+	        
+	        $j.ajax({
+	            type : "POST",
+	    		url : url,
+	    		data : "checkInputBasicInfoGbn=inputEmailID&"+parameter,
+	    		dataType : "json",
+	    		success : function(jsonData) {
+	    			setDisplayInputInputEmailID(jsonData);
+	    		},
+	    		async : false
+	        });
+	    }
+	}
+}
+
+
+function checkInputPostalCode() {
+	
+	if ( $j('#postalCode').val()!='' ) {
+        var url = '/account/checkInputBasicInfo.do';
+        var parameter = $j('#signUpForm').serialize();
+        //$j.post(url, "checkInputBasicInfoGbn=postalCode&"+parameter, function(jsonData){
+        //    setDisplayInputPostalCode(jsonData);
+        //}, "json");
+
+        $j.ajax({
+            type : "POST",
+    		url : url,
+    		data : "checkInputBasicInfoGbn=postalCode&"+parameter,
+    		dataType : "json",
+    		success : function(jsonData) {
+    			setDisplayInputPostalCode(jsonData);
+    		},
+    		async : false
+        });
+    } else {
+    	$j('#postalCode').addClass('error');
+    	$j('#postalCode').focus();
+    }
+}
+
+
+function setDisplayInputInputEmailID(jsonData) {
+	jsonData = jsonData.jsonData;
+    var chkResult = true;
+    //console.log("jsonData.inputEmailID["+jsonData.inputEmailID+"]");
+    //$j('[name=bgyeih]').val(jsonData.otrt);
+    if ( jsonData.inputEmailID == "N" ) {
+        
+        $j('#jXeEK0fmWkinputEmailID').removeClass("error");
+        $j('#jXeEK0fmWkinputEmailID').addClass("valid");
+        $j("#jXeEK0fmWkinputEmailID").next().hide();
+    } else if ( jsonData.inputEmailID == "C" ) {
+        
+	    	
+	    	
+		        $j('#inputCaptchaCode').addClass("error");
+		        var strLabel = "<label for='inputCaptchaCode' generated='true' class='error'>"+jsonData.inputEmailID_chkMsg+"</label>";
+		        if ( $j("#inputCaptchaCode").next().attr('for')=='inputCaptchaCode' ) {
+		        	$j("#inputCaptchaCode").next().replaceWith(strLabel);
+		        } else {
+		        	$j(strLabel).insertAfter($j("#inputCaptchaCode"));
+		        }
+	    	
+	    
+	    $j('#inputCaptchaCode').val("");
+        goTryNewCode();
+        chkResult = false;
+    } else if ( jsonData.inputEmailID == "PR" ) {
+    	document.location.reload(true);
+        chkResult = false;
+    } else if ( jsonData.inputEmailID == "CR" ) {
+    	$j('#inputCaptchaCode').val("");
+    	
+    		goTryNewCode();
+    	
+        chkResult = false;
+    } else if ( jsonData.inputEmailID == 'P' ) {
+        
+	    	
+	    	
+		        $j("#jXeEK0fmWkinputPassword").addClass("error");
+		        var strLabel = "<label for='jXeEK0fmWkinputPassword' generated='true' class='error'>"+jsonData.inputEmailID_chkMsg+"</label>";
+		        if ( $j("#jXeEK0fmWkinputPassword").next().attr('for')=='jXeEK0fmWkinputPassword' ) {
+		        	$j("#jXeEK0fmWkinputPassword").next().replaceWith(strLabel);
+		        } else {
+		        	$j(strLabel).insertAfter($j("#jXeEK0fmWkinputPassword"));
+		        }
+	    	
+	    
+        chkResult = false;
+    } else if ( jsonData.inputEmailID == "PL" || jsonData.inputEmailID == "PE" ) {
+        
+	    	
+	    	
+		    	idmMsgLayerAlertCloseAction(jsonData.inputEmailID_chkMsg, function() {
+			    	$j("#jXeEK0fmWkinputPassword").addClass("error");
+			    	$j("#jXeEK0fmWkreInputPassword").addClass("error");
+					$j("#jXeEK0fmWkinputPassword").val("");
+					$j("#jXeEK0fmWkreInputPassword").val("");
+			    	$j("#jXeEK0fmWkinputPassword").focus();
+					$j.unblockUI();
+		    	});
+	    	
+	    
+        chkResult = false;
+    } else if ( jsonData.inputEmailID == "UE" ) {
+    	
+    	
+    	
+            $j('#jXeEK0fmWkinputEmailID').addClass("error");
+            idmMsgLayerAlertClose(jsonData.inputEmailID_chkMsg, false);
+    	
+    
+    chkResult = false;
+    } else if ( jsonData.inputEmailID_chkMsg ) {
+        
+        
+        	
+        	
+	            $j('#jXeEK0fmWkinputEmailID').addClass("error");
+	            //$j('#jXeEK0fmWkinputEmailID').focus();
+	            var strLabel = "<label for='jXeEK0fmWkinputEmailID' generated='true' class='error'>"+jsonData.inputEmailID_chkMsg+"</label>";
+	            //console.log("inputEmailID for["+$j("#jXeEK0fmWkinputEmailID").next().attr('for')+"]");
+	            if ( $j("#jXeEK0fmWkinputEmailID").next().attr('for')=='jXeEK0fmWkinputEmailID' ) {
+	            	$j("#jXeEK0fmWkinputEmailID").next().replaceWith(strLabel);
+	            } else {
+	            	$j(strLabel).insertAfter($j("#jXeEK0fmWkinputEmailID"));
+	            }
+        	
+        
+        chkResult = false;
+    }
+
+    return chkResult;
+}
+
+var customBirthDateCheckErrMsg = "";
+
+
+function customBirthDateCheck(value, element) {
+
+	$j("#nationality").change(function() {
+		customBirthDateCheck();
+    });
+	if ( $j('label[for=yyyy][class=error]').length > 0 ) {
+		$j('label[for=yyyy][class=error]').remove();
+	}
+	
+	var isAgeLimit = true;
+	var bVldDD = ($j("#dd").val() != "")? true:false;
+	var bVldMM = ($j("#mm").val() != "")? true:false;
+	var bVldYY = ($j("#yyyy").val() != "")? true:false;
+
+	if(bVldDD && bVldMM && bVldYY ){
+		var vDD = Number($j("#dd").val());
+		var vMM = Number($j("#mm").val());
+		var vYY = Number($j("#yyyy").val());
+		
+		var dateEntered = new Date(vYY, vMM-1, vDD);
+	   	var checkDate   = new Date(vYY, vMM-1, 1);
+	   	
+	   	if(dateEntered.getMonth() != checkDate.getMonth()){
+	   		bVldDD = false; 
+	   		isAgeLimit = false;
+	   	}else{
+	   		var sYMD = $j("#yyyy").val() + $j("#mm").val() + $j("#dd").val();
+	   		if ( sYMD >= '20140707' ) {
+	   			isAgeLimit = false;
+	   			bVldDD = false;
+	   			bVldMM = false;
+	   			bVldYY = false;
+	   		}   		
+	   	} 	   		
+	}else{
+		isAgeLimit = false;
+	}
+	
+	if (isAgeLimit) {
+		
+	   	var birthYMD = "";
+		birthYMD += ($j("#yyyy").val()=='')? "9999": $j("#yyyy").val();
+		birthYMD += ($j("#mm").val()=='')? "12": $j("#mm").val();
+		birthYMD += ($j("#dd").val()=='')? "31": $j("#dd").val();
+		
+			
+			if ( "USA".indexOf($j("#nationality").val())!=-1 ) {
+				
+				var birthLimitYMD = '20010707';
+				if ( birthYMD >= birthLimitYMD ) {
+					ageLimit = 13;
+					isAgeLimit = false;
+				}
+			} else if ( "KOR,ESP".indexOf($j("#nationality").val())!=-1 ) {
+				
+				var birthLimitYMD = '20000707';
+				if ( birthYMD >= birthLimitYMD ) {
+					ageLimit = 14;
+					isAgeLimit = false;
+				}
+			} else if ( "ISR".indexOf($j("#nationality").val())!=-1 ) {
+				
+				var birthLimitYMD = '19980707';
+				if ( birthYMD >= birthLimitYMD ) {
+					ageLimit = 16;
+					isAgeLimit = false;
+				}
+			} else if ( "SWE,NOR,FIN,DNK,CZE,GRC,IRL,SVK,BGR,HRV,ROU,IRN,EGY,JOR,QAT,BHR,OMN,YEM,DZA,TUN,LBY,SAU,ISL,CYP,LVA,EST,LTU".indexOf($j("#nationality").val())!=-1 ) {
+				
+				var birthLimitYMD = '19960707';
+				if ( birthYMD >= birthLimitYMD ) {
+					ageLimit = 18;
+					isAgeLimit = false;
+				}
+			} else if ( "KWT".indexOf($j("#nationality").val())!=-1 ) {
+				
+				var birthLimitYMD = '19930707';
+				if ( birthYMD >= birthLimitYMD ) {
+					ageLimit = 21;
+					isAgeLimit = false;
+				}
+			}
+			
+			if ( isAgeLimit==false && ageLimit>0 ) {
+				bVldYY = false;
+				var strLabel = "<label for='yyyy' generated='true' class='error'>您至少须满 00 周岁方可注册。</label>".replace(/00/gi, ageLimit);
+				//$j(strLabel).insertAfter($j("#msgBirthAskReasons"));
+				customBirthDateCheckErrMsg = strLabel;
+			}
+			
+			
+		
+	} else {
+		var strLabel = "<label for='yyyy' generated='true' class='error'>请输入您的生日</label>";
+		//$j(strLabel).insertAfter($j("#msgBirthAskReasons"));
+		customBirthDateCheckErrMsg = strLabel;
+	}
+	
+	var eleID = ( element!=null && element!=undefined && element.id!='' )? element.id: '';
+	//console.log("eleID["+eleID+"] bVldDD["+bVldDD+"]bVldMM["+bVldMM+"]bVldYY["+bVldYY+"]");
+	 
+	if ( bVldDD==true && $j('#dd').hasClass("error")==true ) {
+		$j('#dd').removeClass("error");
+		//window.setTimeout(function() { $j('#dd').removeClass("error"); }, 1);
+	} else if ( bVldDD==false && ($j('#dd').hasClass("error")==false || eleID=='dd') ) {
+		//window.setTimeout(function() { $j('#dd').addClass("error"); }, 1);
+	}
+	if ( bVldMM==true && $j('#mm').hasClass("error")==true ) {
+		$j('#mm').removeClass("error");
+		//window.setTimeout(function() { $j('#mm').removeClass("error"); }, 1);
+	} else if ( bVldMM==false && ($j('#mm').hasClass("error")==false || eleID=='mm') ) {
+		//window.setTimeout(function() { $j('#mm').addClass("error"); }, 1);
+	}
+	if ( bVldYY==true && $j('#yyyy').hasClass("error")==true ) {
+		$j('#yyyy').removeClass("error");
+		//window.setTimeout(function() { $j('#yyyy').removeClass("error"); }, 1);
+	} else if ( bVldYY==false && ($j('#yyyy').hasClass("error")==false || eleID=='yyyy') ) {
+		//window.setTimeout(function() { $j('#yyyy').addClass("error"); }, 1);
+ 	}
+	
+ 	//console.log("isAgeLimit["+isAgeLimit+"]");
+ 	if ( isAgeLimit ) {
+ 		customBirthDateCheckErrMsg = "";
+ 	}
+	$j("#birthDate").data("isAgeLimit", isAgeLimit);
+	//return true;
+	return isAgeLimit;
+}
+
+
+function setDisplayInputPostalCode(jsonData) {
+	jsonData = jsonData.jsonData;
+    var chkResult = true;
+
+    if ( jsonData.postalCode && jsonData.postalCode.postcodeExists == "T" ) {
+        
+        $j('#postalCode').removeClass("error");
+        $j('#postalCode').addClass("valid");
+        if ( jsonData.postalCode.cities ) {
+            var cityCnt = jsonData.postalCode.cities.length;
+            if ( cityCnt==1 ) {
+            	$j('#city').val(jsonData.postalCode.cities[0]);
+            } else if ( cityCnt>1 ) {
+                var ddHTML = "";
+                for (var i=0; i<cityCnt; i++) {
+                    ddHTML += "<input type='radio' name='radio_city' id='radio_city_"+i+"' value='"+jsonData.postalCode.cities[i]+"' class='input-radio' onclick=\"document.getElementById('city').value=this.value; document.getElementById('postalCodeChoiceLayer').style.display='none';\" /><label for='radio_city_"+i+"' class='radioLabel'>"+jsonData.postalCode.cities[i]+"</label><br />";
+                }
+                $j('#postalCodeChoiceLayer dd').html(ddHTML);
+                $j('#postalCodeChoiceLayer').show();
+            }
+            $j('#city').removeClass("error");
+            $j('#postalCode').addClass("valid");
+        }
+        if ( jsonData.postalCode.city ) {
+            $j('#city').val(jsonData.postalCode.city);
+            $j('#city').removeClass("error");
+            $j('#postalCode').addClass("valid");
+        }
+        if ( jsonData.postalCode.province ) {
+            $j('#province').val(jsonData.postalCode.province);
+            $j('#province').removeClass("error");
+            $j('#postalCode').addClass("valid");
+        }
+        //if ( $j("label[for='postalCode']") ) {
+        //    $j("label[for='postalCode']").remove();
+        //}
+        if ( $j('label[for=postalCode][class=error]').length > 0 ) {
+			$j('label[for=postalCode][class=error]').remove();
+		}
+    } else if ( jsonData.postalCode_chkMsg ) {
+        
+        $j('#postalCode').addClass("error");
+        //if ( $j("label[for='postalCode']") ) {
+        //	$j("label[for='postalCode']").remove();
+        //}
+        if ( $j('label[for=postalCode][class=error]').length > 0 ) {
+			$j('label[for=postalCode][class=error]').remove();
+		}
+        $j("<label for='postalCode' generated='true' class='error'>"+jsonData.postalCode_chkMsg+"</label>").insertAfter('#postalCode');
+        
+        $j('#city').val('');
+        $j('#city').addClass("error");
+        $j('#province').val('');
+        $j('#province').addClass("error");
+        chkResult = false;
+    }
+    return chkResult;
+}
+
+function displayPwdArea(obj) {
+    if (obj == "show") {
+        $j('#ch1').hide();
+        $j('#ch2').show();
+        $j('#ch3').show();
+        $j('#jXeEK0fmWkinputPassword').focus();
+    }else if(obj == "hide") {
+    	$j('#ch1').show();
+        $j('#ch2').hide();
+        $j('#ch3').hide();    	
+    }
+}
+function showBirthAskReasons(gbn) {
+    if ( gbn=='hide' ) {
+        $j('#birthLayer').hide();
+    } else {
+        $j('#birthLayer').show();
+    }
+}
+function showVerifyPhoneInformation() {
+	$j("#idmMsgLayer > div.top > h1").html("??? ?? ??");
+	$j("#idmMsgLayer > div.box > p.btn > span.btnTypeB > input.popCancel").val("??");
+	$j("#idmMsgLayer > div.box > p.btn > span.btnTypeB > input.popCancel").attr("title", "??");
+	$j("#idmMsgLayer > div.box > p.btn > span.btnTypeA > input.popConfirm").val("??");
+	$j("#idmMsgLayer > div.box > p.btn > span.btnTypeA > input.popConfirm").attr("title", "??");
+	$j("#idmMsgLayer > div.box > p.btn > span.btnTypeA > input.popConfirm").focus();
+	idmMsgLayerConfirm("?? ?? ?? ??? ????? ???? ? ????.<br />?? ????? ?????? '??'?,<br />?? ??? ??? ???? '??'? ?????.", function() {
+		$j(".verifyPhoneID").trigger("click");
+	});
+}
+
+
+
+
+
+function snsSignInCallback(data) {
+	
+	if ( typeof data != "undefined" && data != "" ) {
+		if ( typeof data.error != "undefined" && data.error != "" ) {
+			if ( typeof data.error.code != "undefined" && data.error.code != "" ) {
+				if ( data.error.code == "9000" ) {
+					idmMsgLayerAlertCloseAction(data.error.message, function() {
+						location.href = "/account/signIn.do?serviceID=ts3rap101s";
+					});
+				} else {
+					idmMsgLayerAlertClose(data.error.message, false);
+				}
+			}
+		} else if ( data.success == "true" ) {
+			//location.href = '/account/signUp.do?serviceID=ts3rap101s';
+			setSNSSignUpInfo(data.snsSignInVO);
+		}
+	}
+}
+function setSNSSignUpInfo(jsonData) {
+	if ( typeof jsonData != "undefined" && jsonData != null && jsonData != "" ) {
+		$j("#jXeEK0fmWkinputEmailID").val((typeof jsonData.email != "undefined" && jsonData.email != "") ? jsonData.email : "");
+		if ( ( "CHN" != "KOR" && "CHN" != "CHN" ) || false == true ) {
+			$j("#firstName").val(jsonData.firstName);
+	        $j("#lastName").val(jsonData.lastName);
+	        if ( typeof jsonData.birthday != "undefined" && jsonData.birthday != "" && jsonData.birthday != null ) {
+		        $j("#yyyy").val(jsonData.birthday.substring(0, 4));
+		        $j("#mm").val(jsonData.birthday.substring(5, 7));
+		        $j("#dd").val(jsonData.birthday.substring(8, 10));
+	        }
+	        if ( typeof jsonData.localeStr != "undefined" && jsonData.localeStr != "" && jsonData.localeStr != null && $j("#nationality option:selected").val() == "" ) {
+				$j("#nationality").val(jsonData.localeStr);
+	        }
+		}
+	}
+	
+}
+//]]>
+</script>
+		    </div>
+			<!-- //Type box -->
+		</div>
+	</form>
+	</div>	
+
+
+
+
+
+
+
+
+
+	<hr />
+	<!-- footer -->
+	<div id="foot">
+		<div class="footer">
+			<div class="inner">
+			<ul class="menu">
+	           	<li><a href="https://account.samsung.com/membership/terms?paramLocale=zh_CN" target="_blank" title="new window">条款和条件</a></li>
+	           	<li><a href="https://account.samsung.com/membership/pp?paramLocale=zh_CN" target="_blank" title="new window" >隐私权政策</a></li>
+	           	<li><a href="/account/popUpContactUs.do?serviceID=ts3rap101s" target="_blank" title="new window">联系我们</a></li>
+              	
+			</ul>
+			<p class="copyright">Copyright? Samsung Electronics Co., Ltd. All rights reserved.</p>
+			<address>Samsung Electronic Bldg, Seocho 2-dong, Seocho-gu, Seoul, Korea</address>
+			</div>			
+		</div>			
+	</div>
+	<!-- footer -->
+
+
+<!-- layer popup -->
+<div id="idmMsgLayer">
+	<div class="top">
+		<h1>通知</h1>
+		<p class="btnClose"><input type="image" src="https://account.samsung.cn/images/v3/popup/pop_close.gif" name="cancle_button" class="close" onclick="$j.unblockUI();" /></p>
+	</div>
+	<div class="box">
+		<div id="idmMsgLayerTitle"></div>
+		<p class="btn">
+		    <span id="idmMsgLayerCancelBtn" class="btnTypeB" style="display: none;"><input type="button" class="popCancel"  value="取消" title="Close Notification" /></span>
+		    <span id="idmMsgLayerConfirmBtn" class="btnTypeA" style="display: none;"><input type="button" class="popConfirm" value="确定" title="Close Notification" /></span>
+			<span id="idmMsgLayerCloseBtn" class="btnTypeA" style="display: none;"><input type="button" class="popClose"   value="关闭" title="Close Notification" /></span>
+		</p>
+	</div>
+	<div class="bottom">&nbsp;</div>
+</div>
+<!-- layer popup -->
+<script type="text/javascript">
+//<![CDATA[
+
+$j(document).ready(function() {
+
+	$j("form").attr('autocomplete', 'off');
+	
+	
+		
+		$j('.popupLegal').popupWindow({
+			windowName: 'popupLegal',
+			width: 800,
+			height: 522,
+			centerBrowser:1
+		});
+	
+		$j(function(){ 
+			$j('.footer .menu > li:last').addClass('last');	
+			$j('.tbrViewA tbody > tr:first-child').addClass('first');
+			$j('.tbrViewA tbody > tr:last-child').addClass('last');
+		});
+		
+		
+		
+		
+		
+		
+	
+});
+function idmMsgLayerAlertClose(msg, isAuthUnblock) {
+	$j("#idmMsgLayerTitle").html("<p>"+msg+"</p>");
+ 	$j.blockUI({ message: $j('#idmMsgLayer'), css: {border: 'none', width: '400px', backgroundColor: '', cursor: 'default'}, overlayCSS: {cursor: 'default', opacity: 0.7, backgroundColor: '#777'} });
+ 	$j('#idmMsgLayerCancelBtn').hide();
+ 	$j('#idmMsgLayerConfirmBtn').hide();
+ 	$j('#idmMsgLayerCloseBtn').show().click(function(){ $j.unblockUI(); });
+ 	if ( isAuthUnblock ) {
+ 	 	setTimeout($j.unblockUI, 2000);
+ 	}
+}
+function idmMsgLayerConfirm(msg, confirmBtnFn) {
+	$j("#idmMsgLayerTitle").html(msg);
+ 	$j.blockUI({ message: $j('#idmMsgLayer'), css: {border: 'none', width: '400px', backgroundColor: '', cursor: 'default'}, overlayCSS: {cursor: 'default', opacity: 0.7, backgroundColor: '#777'} });
+ 	$j('#idmMsgLayerCancelBtn').show().click(function(){ $j.unblockUI(); });
+ 	$j('#idmMsgLayerConfirmBtn').show().click(confirmBtnFn);
+ 	$j('#idmMsgLayerCloseBtn').hide();
+}
+function idmMsgLayerAlertCloseAction(msg, closeBtnFn) {
+	$j("#idmMsgLayerTitle").html(msg);
+ 	$j.blockUI({ message: $j('#idmMsgLayer'), css: {border: 'none', width: '400px', backgroundColor: '', cursor: 'default'}, overlayCSS: {cursor: 'default', opacity: 0.7, backgroundColor: '#777'} });
+ 	$j('#idmMsgLayerCancelBtn').hide();
+ 	$j('#idmMsgLayerCloseBtn').hide();
+ 	$j('.btnClose .close').hide();
+ 	$j('#idmMsgLayerConfirmBtn').show().click(closeBtnFn);
+}
+//]]>
+</script>
+</body>
+</html>

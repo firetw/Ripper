@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://www.ripper.com.cn" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.ripper.com.cn" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.ripper.com.cn/Imports">
+      <xsd:import schemaLocation="http://localhost:8001/Ripper/mex?xsd=xsd0" namespace="http://www.ripper.com.cn" />
+      <xsd:import schemaLocation="http://localhost:8001/Ripper/mex?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="BeerInventoryService_Register_InputMessage">
+    <wsdl:part name="parameters" element="tns:Register" />
+  </wsdl:message>
+  <wsdl:message name="BeerInventoryService_Register_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="BeerInventoryService_SendCmd_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendCmd" />
+  </wsdl:message>
+  <wsdl:message name="BeerInventoryService_UnRegister_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnRegister" />
+  </wsdl:message>
+  <wsdl:message name="BeerInventoryService_HeartBreak_InputMessage">
+    <wsdl:part name="parameters" element="tns:HeartBreak" />
+  </wsdl:message>
+  <wsdl:message name="BeerInventoryService_ReceiveCmd_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ReceiveCmd" />
+  </wsdl:message>
+  <wsdl:portType msc:usingSession="true" name="BeerInventoryService">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="Register">
+      <wsdl:input wsaw:Action="http://www.ripper.com.cn/BeerInventoryService/Register" message="tns:BeerInventoryService_Register_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.ripper.com.cn/BeerInventoryService/RegisterResponse" message="tns:BeerInventoryService_Register_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="SendCmd">
+      <wsdl:input wsaw:Action="http://www.ripper.com.cn/BeerInventoryService/SendCmd" message="tns:BeerInventoryService_SendCmd_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="UnRegister">
+      <wsdl:input wsaw:Action="http://www.ripper.com.cn/BeerInventoryService/UnRegister" message="tns:BeerInventoryService_UnRegister_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="HeartBreak">
+      <wsdl:input wsaw:Action="http://www.ripper.com.cn/BeerInventoryService/HeartBreak" message="tns:BeerInventoryService_HeartBreak_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="ReceiveCmd">
+      <wsdl:output wsaw:Action="http://www.ripper.com.cn/BeerInventoryService/ReceiveCmd" message="tns:BeerInventoryService_ReceiveCmd_OutputCallbackMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

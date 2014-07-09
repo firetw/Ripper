@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root A="KaTa" Pwd="3DE!eddmb">
+  <Item E="SS_WHAT_IS_YOUR_ELDEST_COUSINS_FIRST_AND_LAST_NAME_Q"  Q="您最年长的表亲姓名是什么?" A="张"></Item>
+  <Item E="SS_WHAT_IS_THE_BEST_GIFT_YOU_HAVE_EVER_GIVEN_Q_ABB" Q="您曾收到过的最好礼物是什么?" A="足球"></Item>
+  <Item E="SS_WHAT_IS_THE_NAME_OF_YOUR_2ND_BEST_FRIEND_Q_ABB" Q="您第二要好的朋友叫什么名字?" A="Tom,小王"></Item>
+  <Item E="SS_WHAT_IS_THE_FIRST_AND_LAST_NAME_OF_YOUR_FIRST_LOVE_Q" Q="您的初恋情人的姓名是什么?" A="姜"></Item>
+  <Item E="SS_WHAT_IS_YOUR_FAVOURITE_BOOK_Q_ABB" Q="您最喜欢的书是什么?" A="论语"></Item>
+  <Item E="SS_WHAT_WAS_THE_NAME_OF_YOUR_FIRST_TOY_Q_ABB" Q="您的第一个玩具的名字是什么?" A="变形金刚"></Item>
+  <Item E="SS_WHERE_IS_YOUR_FAVOURITE_HOLIDAY_LOCATION_Q_ABB" Q="您最喜欢的度假地点在哪里?" A="马尔代夫"></Item>
+  <Item E="SS_WHAT_FILM_DID_YOU_FIRST_SEE_AT_THE_CINEMA_Q_ABB" Q="您在电影院看的第一部电影是什么?" A="世上只有妈妈好"></Item>
+  <Item E="SS_WHAT_IS_YOUR_MOTHERS_MAIDEN_NAME_Q" Q="您母亲的娘家姓氏是什么?" A="王"></Item>
+  <Item E="SS_WHAT_WAS_YOUR_FAVOURITE_PLACE_TO_VISIT_AS_A_CHILD_Q" Q="童年时您最喜欢去的地方是哪里?" A="果园"></Item>
+  <Item E="SS_WHAT_IS_YOUR_SIGNATURE_DISH_Q_ABB" Q="您的招牌菜是什么?" A="回锅肉"></Item>
+  <Item E="SS_WHERE_DID_YOUR_PARENTS_FIRST_MEET_Q_ABB" Q="您的父母亲第一次见面在哪里?" A="中国"></Item>
+  <Item E="SS_WHAT_IS_YOUR_FATHERS_MIDDLE_NAME_Q" Q="您父亲的中间名字是什么?" A="二"></Item>
+  <Item E="SS_WHO_WAS_YOUR_CHILDHOOD_HERO_Q" Q="您儿时崇拜的英雄是谁?" A="孙悟空"></Item>
+  <Item E="SS_WHERE_WERE_YOU_WHEN_YOU_HAD_YOUR_FIRST_KISS_Q" Q="您的初吻地点在哪里?" A="校园"></Item>
+</root>
+

@@ -1,0 +1,120 @@
+﻿<Window x:Class="Ripper.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="话费助手" Height="550" Width="600">
+    <Grid Margin="20,0,10,0">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="10"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="210"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="0" Grid.Column="0">
+            <StackPanel Orientation="Vertical" Margin="10,0,10,0">
+                <TextBlock Name="tbmainListView" Text="内容区:" FontSize="16"></TextBlock>
+                <ListView Name="maiListView" MaxHeight="600" >
+                    <ListView.View>
+                        <GridView>
+                            <GridView.Columns>
+                                <GridViewColumn Header="序号" Width="50"   DisplayMemberBinding="{Binding Seq}"></GridViewColumn>
+                                <GridViewColumn Header="手机号" Width="150" DisplayMemberBinding="{Binding Tel}"></GridViewColumn>
+                                <GridViewColumn Header="乐豆" Width="50" DisplayMemberBinding="{Binding LeDou}"></GridViewColumn>
+                                <GridViewColumn Header="操作结果" Width="200" DisplayMemberBinding="{Binding Status}"></GridViewColumn>
+                            </GridView.Columns>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </StackPanel>
+
+        </Grid>
+
+        <GridSplitter Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Width="5" HorizontalAlignment="Right"></GridSplitter>
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,5,0">
+            <StackPanel.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="Margin" Value="10,2,10,2"></Setter>
+                    <Setter Property="FontFamily" Value="微软雅黑"></Setter>
+                    <Setter Property="Width" Value="80"></Setter>
+                    <Setter Property="Height" Value="30"></Setter>
+                    <Setter Property="HorizontalAlignment" Value="Left"></Setter>
+                </Style>
+            </StackPanel.Resources>
+            <Grid  Margin="20,0,10,0" Name="opContainer">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="75"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Button Name="btImpport" Grid.Row="0" Grid.Column="0" Content="导入" Click="btImpport_Click" ></Button>
+                <Button Name="btLogin" Grid.Row="0" Grid.Column="1" Content="登陆" Click="btLogin_Click"  IsEnabled="False"></Button>
+                <Button Name="btJiFen" Grid.Row="1" Grid.Column="0"  Content="积分" Click="btJiFen_Click" IsEnabled="False"></Button>
+                <Button Name="btExport" Grid.Row="1" Grid.Column="1"  Content="导出" Click="btExport_Click" IsEnabled="False"></Button>
+
+
+                <StackPanel Grid.Row="2" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center" Margin="15,0,0,0">
+                    <TextBlock Text="本次任务执行:"></TextBlock>
+                    <ComboBox Name="cbTasks" Margin="20,0,0,0" Width="90">
+                        <ComboBoxItem Content="请选择↓"  Tag="0"  IsSelected="True"></ComboBoxItem>
+                    </ComboBox>
+                </StackPanel>
+
+                <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center"  Margin="15,0,0,0">
+                    <TextBlock Text="导出范围:"></TextBlock>
+                    <TextBox  Margin="45,0,0,0" Name="tbMinValue" Width="30" Text="300"></TextBox>
+                    <TextBlock Text="~" FontSize="16" Margin="5,0,0,0"></TextBlock>
+                    <TextBox  Margin="5,0,0,0" Name="tbMaxValue" Width="30" Text="499"></TextBox>
+                </StackPanel>
+                <StackPanel Grid.Row="4" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center"  Margin="15,0,0,0">
+                    <CheckBox Name="cbJiFen"  Content="登陆成功后自动查询" Checked="cbJiFen_Checked"></CheckBox>
+                </StackPanel>
+                <StackPanel Grid.Row="5" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center"  Margin="15,0,0,0">
+                    <CheckBox Name="cbSuccess"  Content="仅显示中奖" Checked="cbSuccess_Checked" Unchecked="cbSuccess_Unchecked"></CheckBox>
+                </StackPanel>
+
+
+                <StackPanel Grid.Row="6" Grid.ColumnSpan="2" Orientation="Vertical" VerticalAlignment="Center"  Margin="15,0,0,0">
+                    <StackPanel  Orientation="Horizontal">
+                        <CheckBox Name="cbAuto"  Content="自动执行" Checked="cbAuto_Checked" Unchecked="cbAuto_Unchecked" VerticalAlignment="Center"></CheckBox>
+                        <Button  Name="btTimer" Height="20" Width="50" Margin="35,5,5,5" Content="设置" IsEnabled="False" Click="btTimer_Click"></Button>
+                    </StackPanel>
+                    <StackPanel  Orientation="Horizontal">
+                        <TextBlock  Text="登陆时间:" Margin="15,2,0,0" ></TextBlock>
+                        <TextBox Name="tbLogin" Margin="10,0,0,0" Width="100" IsEnabled="False"></TextBox>
+                    </StackPanel>
+                    <StackPanel  Orientation="Horizontal" Margin="0,5,0,5">
+                        <TextBlock  Text="兑换时间:" Margin="15,2,0,0"></TextBlock>
+                        <TextBox Name="tbDuiHuan" Margin="10,0,0,0" Width="100" IsEnabled="False"></TextBox>
+                    </StackPanel>
+
+                </StackPanel>
+                <StackPanel Grid.Row="7" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center"  Margin="15,0,0,0">
+                    <CheckBox Name="cbMultiClient"  Content="多客户端模式" Checked="cbMultiClient_Checked" Unchecked="cbMultiClient_Checked" VerticalAlignment="Center"></CheckBox>
+
+                    <Button Name="btNewClient" Content="新客户端" IsEnabled="False" Click="btNewClient_Click" Width="65" Height="25" VerticalAlignment="Center" ></Button>
+                </StackPanel>
+                <StackPanel Grid.Row="8" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center"  Margin="15,0,0,0">
+                    <TextBlock Name="tbInfo" Text="" FontSize="14"></TextBlock>
+                </StackPanel>
+
+                <StackPanel Grid.Row="9" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center"  Margin="25,0,0,0">
+                    <Button Name="btDuiHuan" Content="兑换" Click="btDuiHuan_Click" Width="150" IsEnabled="False" ></Button>
+                </StackPanel>
+            </Grid>
+
+        </StackPanel>
+    </Grid>
+</Window>

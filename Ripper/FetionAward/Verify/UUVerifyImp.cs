@@ -19,6 +19,11 @@ namespace FetionLoginer.VerifyHelper
 
         public const int VerifyLength = 4;
         public const string FetionUrl = "http://gz.feixin.10086.cn/Bootlick/index";
+
+        /// <summary>
+        /// 验证码类型
+        /// </summary>
+        public static int VerifyCode { get; set; } //"verifyCode";
         /// <summary>
         /// 未识别的标识
         /// </summary>
@@ -35,6 +40,8 @@ namespace FetionLoginer.VerifyHelper
         static ConfigCore()
         {
             Encoding gbk = Encoding.GetEncoding("gbk");
+
+            VerifyCode = Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["VerifyCode"]);
             string errorCode = @"-1001	网络连接失败
 -1002	网络传输超时
 -1003	文件读取失败
@@ -87,15 +94,10 @@ namespace FetionLoginer.VerifyHelper
                     Match match = Regex.Match(line, @"(\d+)\s+(.+)", RegexOptions.IgnoreCase);
                     if (!match.Success || match.Groups.Count < 3) continue;
 
-
                     _errorMap.Add(match.Groups[1].Value, match.Groups[2].Value);
-
-
                 }
             }
         }
-
-
     }
 
     public class UUVerifyImp : IVerify
@@ -151,7 +153,7 @@ namespace FetionLoginer.VerifyHelper
             if (picContent == null) throw new ArgumentNullException("picContent");
             if (picContent.Length < 1) throw new ArgumentOutOfRangeException("picContent", "图片字节必须大于0");
             string strCheckKey = DLL_KEY;
-            int codeType = 1004;
+            int codeType = ConfigCore.VerifyCode;
 
             Stopwatch sw = new Stopwatch();
             sw.Start();
@@ -172,7 +174,7 @@ namespace FetionLoginer.VerifyHelper
             //下面是软件id对应的dll校验key。在开发者后台-我的软件里面可以查的到。
             string strCheckKey = DLL_KEY;
 
-            int codeType = 1004;
+            int codeType = ConfigCore.VerifyCode;
             Stopwatch sw = new Stopwatch();
             sw.Start();
             StringBuilder result = new StringBuilder();
