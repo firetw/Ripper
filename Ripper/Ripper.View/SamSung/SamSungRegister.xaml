@@ -68,7 +68,7 @@
             <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Left" Height="40"  Margin="0,0,0,0" >
                 <CheckBox   Height="30"  Margin="15,15,0,5" Name="cbAutoVerify" Content="是否使用打码平台"  IsChecked="True" Click="cbAutoVerify_Click"></CheckBox>
                 <Button  Name="btSubmit" Content="手工提交" Height="30" Width="100" Margin="40,5,0,5" Click="btSubmit_Click"></Button>
-                <CheckBox   Height="30"  Margin="15,15,10,5" Name="cbAutoSubmit" Content="自动提交"  IsChecked="True" Click="cbAutoSubmit_Click"></CheckBox>
+                <CheckBox   Height="30"  Margin="15,15,10,5" Name="cbAutoSubmit" Content="自动提交短信"  IsChecked="True" Click="cbAutoSubmit_Click"></CheckBox>
             </StackPanel>
 
             <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Left" Height="40"  Margin="0,0,0,0" >

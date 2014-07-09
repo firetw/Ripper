@@ -76,12 +76,16 @@ namespace SamSung
             this.maiListView.ContextMenu = ctlMenu;
             this.tbTime.Text = "";
             this.tbTelCode.TextChanged += tbTelCode_TextChanged;
-            this.tbImgVerify.TextChanged += tbImgVerify_TextChanged;
+            //this.tbImgVerify.TextChanged += tbImgVerify_TextChanged;
 
             this.btTelCodeVerify.Visibility = Visibility.Collapsed;
-            this.btSubmit.Visibility = Visibility.Collapsed;
         }
 
+        /// <summary>
+        /// 因为图片验证码还需要人工调整，所以不能自动提交
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void tbImgVerify_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (!_isSmsVerify) return;
@@ -240,12 +244,10 @@ namespace SamSung
         {
             if (this.cbAutoSubmit.IsChecked.HasValue && this.cbAutoSubmit.IsChecked.Value)
             {
-                this.btSubmit.Visibility = Visibility.Collapsed;
                 this.btTelCodeVerify.Visibility = Visibility.Collapsed;
             }
             else
             {
-                this.btSubmit.Visibility = Visibility.Visible;
                 this.btTelCodeVerify.Visibility = Visibility.Visible;
             }
         }
