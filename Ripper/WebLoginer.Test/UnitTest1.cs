@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Text.RegularExpressions;
 using System.Collections.Generic;
+using StarTech.NPOI;
 
 namespace WebLoginer.Test
 {
@@ -168,6 +169,30 @@ namespace WebLoginer.Test
                 return "F";
             else
                 return "M";
+        }
+
+        [TestMethod]
+        public void NpoiTest()
+        {
+            MyNPOI npoi = new MyNPOI();
+            npoi.GenerateData();
+
+        }
+
+        [TestMethod]
+        public void NumMatch()
+        {
+
+            string tmpStr = "<b>0.9123元</b>";//([-\d,]+)
+            Match match = null;
+
+            string numValue = string.Empty;
+            if ((match = Regex.Match(tmpStr, @"([-\d,\.]+)")).Success)
+            {
+                numValue = match.Groups[1].Value;
+            }
+
+            Assert.IsTrue(!string.IsNullOrEmpty(numValue));
         }
 
         private string ReadContext(string data)

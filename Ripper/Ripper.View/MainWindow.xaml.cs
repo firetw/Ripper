@@ -46,6 +46,9 @@ namespace Ripper.View
         Timer _duiHuanTimer = null;
         Timer _heartBreakTimer = null;
         string _clientId = string.Empty;
+        int _execCount = 0;
+        int _currentIndex = 0;
+        private object lockObject = new object();
 
         public MainWindow()
         {
@@ -58,6 +61,11 @@ namespace Ripper.View
             Thread.CurrentThread.Priority = ThreadPriority.AboveNormal;
             this.tbLogin.Text = "23:55:00";
             this.tbDuiHuan.Text = "23:59:54";
+
+            DateTime now = DateTime.Now;
+            this.tbBegin.Text = now.AddMonths(-1).ToString("yyyy-MM-01");
+            this.tbEnd.Text = now.ToString("yyyy-MM-dd");
+
             _leDouHandler = new LeDouSetDelegate(SetLeDouValue);
             this.Closing += MainWindow_Closing;
             System.Net.ServicePointManager.DefaultConnectionLimit = 50;
@@ -178,12 +186,134 @@ namespace Ripper.View
         {
 
         }
+        private void btExcelExport_Click(object sender, RoutedEventArgs e)
+        {
+            string msg = string.Empty;
+            try
+            {
+                NPOIHelper.Instance.WriteToFile();
+                msg = "导出完成";
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex);
+                msg = "导出现异常";
+            }
+            Dispatcher.BeginInvoke(new Action<string>((o) =>
+            {
+                this.tbInfo.Text = o;
+            }), msg);
+        }
+        private void btQuery_Click(object sender, RoutedEventArgs e)
+        {
+            string startTime = this.tbBegin.Text;
+            string endTime = this.tbEnd.Text;
+            if (!Regex.IsMatch(startTime, @"\d{4}-\d{1,2}-\d{1,2}") || !Regex.IsMatch(endTime, @"\d{4}-\d{1,2}-\d{1,2}"))
+            {
+                this.tbInfo.Text = "数据格式必须为 2014-04-01";
+                return;
+            }
+            //for (int i = 0; i < EntityItems.Count; i++)
+            //{
+            //    Entity item = EntityItems[i];
+            //    item.TaskStatus = "业务详情查询";
+            //    ThreadPool.QueueUserWorkItem(new WaitCallback(entity =>
+            //    {
+            //        try
+            //        {
+            //            XjWangTingQuery query = new XjWangTingQuery();
+            //            query.OnTaskCompleted += query_OnTaskCompleted;
+            //            item.StartTime = startTime;
+            //            item.EndTime = endTime;
 
+            //            query.Context = item;
+            //            query.Process(item);
+            //        }
+            //        catch (Exception ex)
+            //        {
+            //            _log.Error(ex);
+            //        }
+            //    }), item);
+            //}
+            int threadCount = 5 > _AllRep.Count ? 1 : Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["ThreadCount"]);
+            for (int i = 0; i < threadCount; i++)
+            {
+                Thread workThread = new Thread(new ThreadStart(() =>
+                {
+                    while (true)
+                    {
+                        Entity item = null;
+                        lock (lockObject)
+                        {
+                            if (_currentIndex >= _AllRep.Count) return;
+                            item = _AllRep[_currentIndex];
+                            Interlocked.Add(ref _currentIndex, 1);
+                        }
+                        try
+                        {
+                            if (item != null)
+                            {
+                                Dispatcher.Invoke(new Action(() =>
+                                {
+                                    item.TaskStatus = "业务详情查询";
+                                }));
+                                XjWangTingQuery query = new XjWangTingQuery();
+                                query.OnTaskCompleted += query_OnTaskCompleted;
+                                item.StartTime = startTime;
+                                item.EndTime = endTime;
+
+                                query.Context = item;
+                                query.Process(item);
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            _log.Error(ex);
+                        }
+                        //finally
+                        //{
+                        //    lock (lockObject)
+                        //    {
+
+                        //    }
+                        //}
+
+                    }
+
+                }));
+                workThread.Start();
+            }
+        }
+
+        void query_OnTaskCompleted(bool obj)
+        {
+            lock (lockObject)
+            {
+                Interlocked.Add(ref _execCount, 1);
+
+                if (_execCount == _AllRep.Count)
+                {
+                    string msg = string.Empty;
+                    try
+                    {
+                        NPOIHelper.Instance.WriteToFile();
+                        msg = "导出完成";
+                    }
+                    catch (Exception ex)
+                    {
+                        _log.Error(ex);
+                        msg = "导出现异常";
+                    }
+                    Dispatcher.BeginInvoke(new Action<string>((o) =>
+                    {
+                        this.tbInfo.Text = o;
+                    }), msg);
+                }
+            }
+        }
 
         private void btImpport_Click(object sender, RoutedEventArgs e)
         {
-            //int index = 1;
-            //Stream myStream = null;
             string line = string.Empty;
 
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
@@ -197,6 +327,9 @@ namespace Ripper.View
             {
                 //index = 1;
                 EntityItems.Clear();
+                _AllRep.Clear();
+                NPOIHelper.Instance.ReLoad();
+                _execCount = 0;
 
                 string file = openFileDialog1.FileName;
                 ReadFile(file);
@@ -235,6 +368,8 @@ namespace Ripper.View
             {
                 this.btLogin.IsEnabled = true;
                 this.btExport.IsEnabled = true;
+                this.btQuery.IsEnabled = true;
+                this.btExcelExport.IsEnabled = true;
             }
         }
         private void btExport_Click(object sender, RoutedEventArgs e)
@@ -289,7 +424,7 @@ namespace Ripper.View
             for (int i = 0; i < EntityItems.Count; i++)// 
             {
                 Entity item = EntityItems[i];
-                item.Status = "准备登陆";
+                item.TaskStatus = "准备登陆";
                 ThreadPool.QueueUserWorkItem(new WaitCallback(SetLeDou), item);
             }
 
@@ -310,7 +445,11 @@ namespace Ripper.View
             try
             {
                 WebOperResult wr = _helper.Login(tel, pwd, _log);
-                if (wr == null) return;
+                if (wr == null)
+                {
+                    this.maiListView.Dispatcher.BeginInvoke(_leDouHandler, new object[] { item, "检查用户名或密码", null }); //BeginInvoke(lvItemHandle, new object[] { item, context });
+                    return;
+                }
 
                 Match match = Regex.Match(wr.Text, "<p>乐豆：<span id=\"score_number_info\">\\s*(\\d+)\\s*</span>");
 
@@ -329,16 +468,23 @@ namespace Ripper.View
         private void SetLeDouValue(Entity entity, string leDou, WebOperResult wr)
         {
             if (entity == null) return;
+            if (wr == null)
+            {
+                entity.TaskStatus = leDou;
+                entity.IsLogin = false;
+                return;
+            }
             int tmpLeDou = 0;
             Int32.TryParse(leDou, out tmpLeDou);
             entity.LeDou = tmpLeDou;
             entity.CookieContainer = wr.CookieContainer;
             entity.Cookies = wr.Cookies;
-            entity.Status = "登陆成功";
+            entity.IsLogin = true;
+            entity.TaskStatus = "登陆成功";
 
             if (cbJiFen.IsChecked.HasValue && cbJiFen.IsChecked.Value)
             {
-                entity.Status = "查询积分";
+                entity.TaskStatus = "查询积分";
                 ThreadPool.QueueUserWorkItem(new WaitCallback(item =>
                 {
                     try
@@ -359,7 +505,12 @@ namespace Ripper.View
             for (int i = 0; i < EntityItems.Count; i++)
             {
                 Entity item = EntityItems[i];
-                item.Status = "准备兑换";
+                if (!item.IsLogin)
+                {
+                    item.TaskStatus = "请检查用户名或密码";
+                    continue;
+                }
+                item.TaskStatus = "准备兑换";
                 string giftCode = (this.cbTasks.SelectedItem as ComboBoxItem).Tag.ToString();
                 int leDou = 0;
                 if (Config.GiftLeDouMap.ContainsKey(giftCode))
@@ -383,7 +534,7 @@ namespace Ripper.View
                 }
                 else
                 {
-                    item.Status = "乐豆不足";
+                    item.TaskStatus = "乐豆不足";
                 }
             }
             if (_options != null && _options.Master == 1 && _service != null)
@@ -400,7 +551,12 @@ namespace Ripper.View
             for (int i = 0; i < EntityItems.Count; i++)
             {
                 Entity item = EntityItems[i];
-                item.Status = "查询积分";
+                if (!item.IsLogin)
+                {
+                    item.TaskStatus = "请检查用户名或密码";
+                    continue;
+                }
+                item.TaskStatus = "查询积分";
                 ThreadPool.QueueUserWorkItem(new WaitCallback(entity =>
                 {
                     try

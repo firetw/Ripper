@@ -205,6 +205,11 @@ namespace Ripper.View
             //postContext.Cookies.Add(readContext.Cookies);
             //postContext.Cookies.Add(readResult.Cookies);
             WebOperResult postResult = HttpWebHelper.Post(postContext);
+            if (Regex.IsMatch(postResult.Text, "window.alert(\"手机号码或服务密码错误\");"))
+            {
+                return null;
+            }
+
 
             if (Config.LogLevel == 0)
             {
@@ -395,13 +400,13 @@ namespace Ripper.View
         private void SetEntity(Entity entity, string status, string cmd)
         {
             if (entity == null) return;
-            entity.Status = status;
+            entity.TaskStatus = status;
 
             if (cmd == "1")
             {
                 using (StreamWriter writer = File.AppendText(logFileName))
                 {
-                    writer.WriteLine(string.Format("{0}	{1}	{2}", entity.Tel, entity.LeDou, entity.Status));
+                    writer.WriteLine(string.Format("{0}	{1}	{2}", entity.Tel, entity.LeDou, entity.TaskStatus));
                 }
             }
         }
@@ -417,8 +422,8 @@ namespace Ripper.View
 
 
             string huafeiData = "service=direct%2F1%2Ffeequery.BalanceQuery%2F%24Form&sp=S0&Form0=%24FormConditional%2CBLANCE%2C%24FormConditional%240&%24FormConditional=T&%24FormConditional%240=F&BLANCE=%B2%E9%D1%AF&operHipInfo=&com.ailk.ech.framework.html.TOKEN={0}";
-            string zhangdanData = "service=direct%2F1%2Ffeequery.BillQueryNew%2F%24Form&sp=S0&Form0=%24Submit%2C%24FormConditional&%24FormConditional=F&MONTH=201406&%24Submit=%B2%E9%D1%AF&com.ailk.ech.framework.html.TOKEN={0}&SMSOUTNEW=";
-            string youhuiData = "service=direct%2F1%2Fsvcquery.DictimeQuery%2F%24Form&sp=S0&Form0=bquery&BCYC_ID=201406&bquery=%B2%E9%D1%AF&com.ailk.ech.framework.html.TOKEN={0}";
+            string zhangdanData = "service=direct%2F1%2Ffeequery.BillQueryNew%2F%24Form&sp=S0&Form0=%24Submit%2C%24FormConditional&%24FormConditional=F&MONTH=" + DateTime.Now.ToString("yyyyMM") + "&%24Submit=%B2%E9%D1%AF&com.ailk.ech.framework.html.TOKEN={0}&SMSOUTNEW=";
+            string youhuiData = "service=direct%2F1%2Fsvcquery.DictimeQuery%2F%24Form&sp=S0&Form0=bquery&BCYC_ID=" + DateTime.Now.ToString("yyyyMM") + "&bquery=%B2%E9%D1%AF&com.ailk.ech.framework.html.TOKEN={0}";
 
             string getUrl = "http://www.xj.10086.cn/service/fee/svcquery/AllFunctionOperation/";
 
@@ -429,7 +434,7 @@ namespace Ripper.View
             entity.Dispatcher.BeginInvoke(_setResultHandler, new object[] { entity, "账单查询完毕", "" });
             WebOperResult yhWr = QueryItem(cc, cookies, youhuiData, yhUrl);
             entity.Dispatcher.Invoke(_setResultHandler, new object[] { entity, "优惠查询完毕", "" });
-            
+
             RequestContext reContext = RequestContext.DefaultContext();
             reContext.ContentType = "text/html";
             reContext.URL = getUrl;

@@ -20,27 +20,32 @@ namespace Ripper.View
         static readonly log4net.ILog _log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private void Application_Startup(object sender, StartupEventArgs e)
         {
-            //MainWindow mw = new MainWindow();
+            Application.Current.DispatcherUnhandledException += Current_DispatcherUnhandledException;
 
-            //var options = new Options();
-            //if (CommandLine.Parser.Default.ParseArguments(e.Args, options))
-            //{
+            MainWindow mw = new MainWindow();
 
-            //    mw.Initilize(options);
+            var options = new Options();
+            if (CommandLine.Parser.Default.ParseArguments(e.Args, options))
+            {
 
-            //}
-            //else
-            //{
-            //    mw.Initilize();
-            //}
-            //mw.Show();
+                mw.Initilize(options);
+
+            }
+            else
+            {
+                mw.Initilize();
+            }
+            mw.Show();
+
+
+
 
             //SamSung.SamSungRegister register = new SamSung.SamSungRegister();
 
-            Application.Current.DispatcherUnhandledException += Current_DispatcherUnhandledException;
+            
 
-            SamSungRegister register = new SamSungRegister();
-            register.Show();
+            //SamSungRegister register = new SamSungRegister();
+            //register.Show();
 
 
 

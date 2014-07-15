@@ -21,7 +21,7 @@
                                 <GridViewColumn Header="序号" Width="50"   DisplayMemberBinding="{Binding Seq}"></GridViewColumn>
                                 <GridViewColumn Header="手机号" Width="150" DisplayMemberBinding="{Binding Tel}"></GridViewColumn>
                                 <GridViewColumn Header="乐豆" Width="50" DisplayMemberBinding="{Binding LeDou}"></GridViewColumn>
-                                <GridViewColumn Header="操作结果" Width="200" DisplayMemberBinding="{Binding Status}"></GridViewColumn>
+                                <GridViewColumn Header="操作结果" Width="200" DisplayMemberBinding="{Binding TaskStatus}"></GridViewColumn>
                             </GridView.Columns>
                         </GridView>
                     </ListView.View>
@@ -45,6 +45,9 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="40"></RowDefinition>
                     <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
                     <RowDefinition Height="30"></RowDefinition>
                     <RowDefinition Height="30"></RowDefinition>
                     <RowDefinition Height="30"></RowDefinition>
@@ -65,28 +68,44 @@
                 <Button Name="btExport" Grid.Row="1" Grid.Column="1"  Content="导出" Click="btExport_Click" IsEnabled="False"></Button>
 
 
-                <StackPanel Grid.Row="2" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center" Margin="15,0,0,0">
+                <Button Name="btQuery" Grid.Row="2" Grid.Column="0"  Content="查询" Click="btQuery_Click"   IsEnabled="False"></Button>
+                <Button Name="btExcelExport" Grid.Row="2" Grid.Column="1"  Content="Excel" Click="btExcelExport_Click" IsEnabled="False"></Button>
+
+
+                <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center" Margin="15,0,0,0">
+
+                    <TextBlock  Text="交费开始时间:" Margin="0,2,0,0"></TextBlock>
+                    <TextBox Name="tbBegin" Margin="10,0,0,0" Width="80"></TextBox>
+
+                </StackPanel>
+
+                <StackPanel Grid.Row="4" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center" Margin="15,0,0,0">
+                    <TextBlock  Text="交费结束时间:" Margin="0,2,0,0"></TextBlock>
+                    <TextBox Name="tbEnd" Margin="10,0,0,0" Width="80"></TextBox>
+                </StackPanel>
+
+                <StackPanel Grid.Row="5" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center" Margin="15,0,0,0">
                     <TextBlock Text="本次任务执行:"></TextBlock>
                     <ComboBox Name="cbTasks" Margin="20,0,0,0" Width="90">
                         <ComboBoxItem Content="请选择↓"  Tag="0"  IsSelected="True"></ComboBoxItem>
                     </ComboBox>
                 </StackPanel>
 
-                <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center"  Margin="15,0,0,0">
+                <StackPanel Grid.Row="6" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center"  Margin="15,0,0,0">
                     <TextBlock Text="导出范围:"></TextBlock>
                     <TextBox  Margin="45,0,0,0" Name="tbMinValue" Width="30" Text="300"></TextBox>
                     <TextBlock Text="~" FontSize="16" Margin="5,0,0,0"></TextBlock>
                     <TextBox  Margin="5,0,0,0" Name="tbMaxValue" Width="30" Text="499"></TextBox>
                 </StackPanel>
-                <StackPanel Grid.Row="4" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center"  Margin="15,0,0,0">
+                <StackPanel Grid.Row="7" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center"  Margin="15,0,0,0">
                     <CheckBox Name="cbJiFen"  Content="登陆成功后自动查询" Checked="cbJiFen_Checked"></CheckBox>
                 </StackPanel>
-                <StackPanel Grid.Row="5" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center"  Margin="15,0,0,0">
+                <StackPanel Grid.Row="8" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center"  Margin="15,0,0,0">
                     <CheckBox Name="cbSuccess"  Content="仅显示中奖" Checked="cbSuccess_Checked" Unchecked="cbSuccess_Unchecked"></CheckBox>
                 </StackPanel>
 
 
-                <StackPanel Grid.Row="6" Grid.ColumnSpan="2" Orientation="Vertical" VerticalAlignment="Center"  Margin="15,0,0,0">
+                <StackPanel Grid.Row="9" Grid.ColumnSpan="2" Orientation="Vertical" VerticalAlignment="Center"  Margin="15,0,0,0">
                     <StackPanel  Orientation="Horizontal">
                         <CheckBox Name="cbAuto"  Content="自动执行" Checked="cbAuto_Checked" Unchecked="cbAuto_Unchecked" VerticalAlignment="Center"></CheckBox>
                         <Button  Name="btTimer" Height="20" Width="50" Margin="35,5,5,5" Content="设置" IsEnabled="False" Click="btTimer_Click"></Button>
@@ -101,16 +120,16 @@
                     </StackPanel>
 
                 </StackPanel>
-                <StackPanel Grid.Row="7" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center"  Margin="15,0,0,0">
+                <StackPanel Grid.Row="10" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center"  Margin="15,0,0,0">
                     <CheckBox Name="cbMultiClient"  Content="多客户端模式" Checked="cbMultiClient_Checked" Unchecked="cbMultiClient_Checked" VerticalAlignment="Center"></CheckBox>
 
                     <Button Name="btNewClient" Content="新客户端" IsEnabled="False" Click="btNewClient_Click" Width="65" Height="25" VerticalAlignment="Center" ></Button>
                 </StackPanel>
-                <StackPanel Grid.Row="8" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center"  Margin="15,0,0,0">
+                <StackPanel Grid.Row="11" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center"  Margin="15,0,0,0">
                     <TextBlock Name="tbInfo" Text="" FontSize="14"></TextBlock>
                 </StackPanel>
 
-                <StackPanel Grid.Row="9" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center"  Margin="25,0,0,0">
+                <StackPanel Grid.Row="12" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center"  Margin="25,0,0,0">
                     <Button Name="btDuiHuan" Content="兑换" Click="btDuiHuan_Click" Width="150" IsEnabled="False" ></Button>
                 </StackPanel>
             </Grid>

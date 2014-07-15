@@ -140,6 +140,140 @@ namespace Ripper.View.Model
 
     }
 
+
+    public class XjWTTask : ITask<Entity>
+    {
+        Entity _context = null;
+        TimeoutHandlerPara _para = new TimeoutHandlerPara();
+        private bool _isCompleted;
+        public event Action<bool> OnTaskCompleted;
+        static readonly log4net.ILog _log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
+        public Entity Context
+        {
+            get { return _context; }
+            set { _context = value; }
+        }
+
+        /// <summary>
+        /// 是否完成，
+        /// 有可能为正常完成，也可能为异常完成
+        /// </summary>
+        public bool IsCompleted
+        {
+            get { return _isCompleted; }
+            set
+            {
+                _isCompleted = value;
+                if (OnTaskCompleted != null)
+                    OnTaskCompleted(_isCompleted);
+            }
+        }
+
+        public int Timeout { get; set; }
+
+        public event TimeoutHandler<Entity> OnTaskTimeout;
+
+        public XjWTTask()
+        {
+            Timeout = 5 * 60 * 1000;
+        }
+        public virtual void Do(Entity context)
+        {
+        }
+
+        public void Process(Entity context)
+        {
+            _context = context;
+            WaitForHandler();
+        }
+        private void WrapProcess(Entity context)
+        {
+            try
+            {
+                _context.Status = TaskStatus.Execing;
+                _para.ThreadToKill = Thread.CurrentThread;
+                Do(context);
+                //_context.Status = TaskStatus.Success;
+            }
+            catch (Exception ex)
+            {
+                _para.Content += ex.ToString();
+                _context.ExecInfo += "\r\n" + "异常信息" + _para.Content;
+                _context.Status = TaskStatus.Failed;
+                _log.Error(ex);
+            }
+            finally
+            {
+                IsCompleted = true;
+            }
+        }
+        private void WaitForHandler()
+        {
+            ProcessHandler<Entity> wfh = new ProcessHandler<Entity>(WrapProcess);
+            IAsyncResult iar = wfh.BeginInvoke(_context, null, null);
+            if (iar.AsyncWaitHandle.WaitOne(Timeout))
+            {
+                wfh.EndInvoke(iar);
+            }
+            else
+            {
+                try
+                {
+                    _para.IsCanContinue = false;
+                    _context.Status = TaskStatus.Timeout;
+                    wfh = null;
+                    if (_para.ThreadToKill != null)
+                        _para.ThreadToKill.Abort();
+                }
+                catch (ThreadAbortException tae)
+                {
+
+                }
+                TimeoutHandler();
+            }
+        }
+        private void TimeoutHandler()
+        {
+            if (_para == null) return;
+            if (_para.ExpliciteQuitEvent)
+            {
+                IsCompleted = true;
+                HandlerTimeout();
+                OnTaskTimeout(_context);
+            }
+        }
+
+        protected virtual void HandlerTimeout()
+        {
+
+        }
+
+
+
+
+        private class TimeoutHandlerPara
+        {
+            public string Content;
+            public bool IsCanContinue;
+            public bool ExpliciteQuitEvent;
+            public Thread ThreadToKill;
+
+            public override string ToString()
+            {
+                return Content;
+            }
+
+            internal void Reset()
+            {
+                Content = string.Empty;
+                ExpliciteQuitEvent = false;
+                IsCanContinue = true;
+            }
+        }
+
+    }
+
     public class Context : INotifyPropertyChanged
     {
         public Thread CurrentTheread
@@ -298,6 +432,7 @@ namespace Ripper.View.Model
         public string Birthday { get; private set; }
 
 
+        public string Pwd { get; set; }
         private string _registerInfo;
         public string RegisterInfo
         {
