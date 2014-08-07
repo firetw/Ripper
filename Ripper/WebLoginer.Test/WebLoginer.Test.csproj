@@ -80,6 +80,7 @@
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitTest2.cs" />
+    <Compile Include="WapTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Ripper.View\Ripper.View.csproj">

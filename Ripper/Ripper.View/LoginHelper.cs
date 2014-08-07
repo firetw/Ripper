@@ -348,6 +348,7 @@ namespace Ripper.View
                     }
                 }
             }
+            log.Debug(GetMsg(entity.Tel.ToString(), sw.ElapsedMilliseconds, context));
             if (Config.LogLevel == 0)
             {
                 sw.Stop();
