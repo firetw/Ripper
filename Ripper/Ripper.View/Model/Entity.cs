@@ -6,6 +6,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Threading;
+using Tools;
 using WebLoginer.Tools;
 
 namespace Ripper.View.Model

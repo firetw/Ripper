@@ -105,7 +105,6 @@
     <Compile Include="ProcessStart.cs" />
     <Compile Include="RipperService.cs" />
     <Compile Include="SamSung\FuXingRep.cs" />
-    <Compile Include="SamSung\PwdRep.cs" />
     <Compile Include="SamSung\RegisterTask.cs" />
     <Compile Include="SamSung\SamSungRegister.xaml.cs">
       <DependentUpon>SamSungRegister.xaml</DependentUpon>
@@ -121,10 +120,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="UU\CRC32.cs" />
-    <Compile Include="UU\IVerify.cs" />
-    <Compile Include="UU\UUVerifyImp.cs" />
-    <Compile Include="UU\Wrapper.cs" />
     <Compile Include="XjParser.cs" />
     <Compile Include="XjWangTingQuery.cs" />
     <Page Include="MainWindow.xaml">
@@ -201,6 +196,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Tools\Tools.csproj">
+      <Project>{15b64f65-afb8-4f16-ad27-d16ef3a2eae9}</Project>
+      <Name>Tools</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WebLoginer\WebLoginer.csproj">
       <Project>{5af38cb3-4afc-4384-9772-33b0f29a5a98}</Project>
       <Name>WebLoginer</Name>

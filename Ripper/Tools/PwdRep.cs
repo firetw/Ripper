@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Ripper.View.SamSung
+namespace Tools
 {
     public class PwdRep : List<string>
     {
@@ -19,7 +19,7 @@ namespace Ripper.View.SamSung
         char[] LowChars = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
         char[] UpperChars = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
         //char[] SpecialChars = { '!', '@', '#', '%', '^' };
-        char[] SpecialChars = { '!','!','_' };//, '@', '#', '%', '^' 
+        char[] SpecialChars = { '!', '!', '_' };//, '@', '#', '%', '^' 
 
         Random _random = new Random();
         public PwdRep()

@@ -1,5 +1,4 @@
 ﻿using Ripper.View.Model;
-using Ripper.View.SamSung;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -10,6 +9,7 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using Tools;
 using WebLoginer.Core;
 
 namespace SamSung

@@ -3,9 +3,9 @@ using System.Text;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Text.RegularExpressions;
-using Ripper.View.SamSung;
 using SamSung;
 using System.IO;
+using Tools;
 
 namespace WebLoginer.Test
 {

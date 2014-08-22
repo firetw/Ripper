@@ -6,19 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
+using Tools;
 using Uuwise;
 
 namespace Ripper.View.Model
 {
-    public interface ITask<T> where T : Context
-    {
-        void Process(T context);
-    }
-
-    public delegate void WaitForHandler(string prompt, int times, bool expliciteQuitNeEvent);
-    public delegate void ProcessHandler<T>(T context);
-    public delegate void TimeoutHandler<T>(T context);
-
     public class WebTask : ITask<RegisterContext>
     {
         RegisterContext _context = null;
@@ -274,53 +266,7 @@ namespace Ripper.View.Model
 
     }
 
-    public class Context : INotifyPropertyChanged
-    {
-        public Thread CurrentTheread
-        {
-            get
-            {
-                return Thread.CurrentThread;
-            }
-        }
-        public TaskStatus Status { get; set; }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-
-        protected void OnPropertyChanged(string propertyName)
-        {
-            if (PropertyChanged != null)
-            {
-                System.Threading.Interlocked.Exchange<string>(ref mChangedPropertyName, propertyName);
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
-
-
-        private string mChangedPropertyName = string.Empty;
-        /// <summary>
-        /// 当前是那个属性值改变
-        /// </summary>
-        public string ChangedPropertyName
-        {
-
-            set { mChangedPropertyName = value; }
-            get { return mChangedPropertyName; }
-        }
-    }
-    public enum TaskStatus
-    {
-        /// <summary>
-        /// 未知异常
-        /// </summary>
-        WaitForBegin = 0,
-        Execing = 1,
-        Success = 2,
-        Timeout = 3,
-        Failed = 4
-
-    }
+    
     public class RegisterContext : Context
     {
 
