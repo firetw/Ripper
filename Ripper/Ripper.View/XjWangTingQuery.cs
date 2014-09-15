@@ -1,4 +1,5 @@
-﻿using Ripper.View.Model;
+﻿using Ripper.View.Henan;
+using Ripper.View.Model;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -32,42 +33,51 @@ namespace Ripper.View
 
         public XjWangTingQuery()
         {
-            encoding = Encoding.UTF8;
+            encoding = Encoding.GetEncoding("gbk"); //Encoding.UTF8;
         }
 
         public override void Do(Entity context)
         {
-            try
+            _exportItem = new ExportItem
             {
-                _exportItem = new ExportItem
+                Tel = Context.Tel,
+                Pwd = Context.Pwd
+            };
+            for (int i = 0; i < ExecConfig.RetryCount; i++)
+            {
+                try
                 {
-                    Tel = Context.Tel,
-                    Pwd = Context.Pwd
-                };
-                if (Login(Context.Tel, Context.Pwd))
+                    Context.TaskStatus = "";
+                    if (Login(Context.Tel, Context.Pwd))
+                    {
+                        Context.TaskStatus = "登陆成功";
+                        Query();
+                        _exportItem.Status = "正常";
+                        Context.TaskStatus = "正常结束";
+                        Context.IsLogin = true;
+                    }
+                    else
+                    {
+                        Context.TaskStatus = "请检查用户名和密码";
+                        Context.IsLogin = false;
+                    }
+                }
+                catch (Exception ex)
                 {
-                    Context.TaskStatus = "登陆成功";
-                    Query();
-                    _exportItem.Status = "正常";
-                    Context.TaskStatus = "正常结束";
-                    Context.IsLogin = true;
+                    _exportItem.Status = "统计异常";
+                    Context.TaskStatus = "执行出现异常";
+                    _log.Error(ex);
+                }
+                if (_exportItem.Status == "正常")
+                {
+                    break;
                 }
                 else
                 {
-                    Context.TaskStatus = "请检查用户名和密码";
-                    Context.IsLogin = false;
+                    _exportItem.Status = "统计异常";
                 }
             }
-            catch (Exception ex)
-            {
-                _exportItem.Status = "统计异常";
-                Context.TaskStatus = "执行出现异常";
-                _log.Error(ex);
-            }
-            finally
-            {
-                NPOIHelper.Instance.WriteRow(_exportItem);
-            }
+            NPOIHelper.Instance.WriteRow(_exportItem);
         }
 
         protected override void HandlerTimeout()
@@ -109,7 +119,7 @@ namespace Ripper.View
 
             Context.TaskStatus = "话费查询";
             ///话费
-            WebOperResult hfWr = QueryItem(_container, _cookies, huafeiData, hfUrl);
+            //WebOperResult hfWr = QueryItem(_container, _cookies, huafeiData, hfUrl);
             //_exportItem.Data[1] = 0;
 
 
@@ -185,6 +195,7 @@ namespace Ripper.View
             getContext.URL = url;
             getContext.Method = "GET";
             getContext.CookieContainer = cc;
+            getContext.Encoding = encoding;
             if (cookies != null)
                 getContext.CookieContainer.Add(cookies);
 
@@ -198,6 +209,7 @@ namespace Ripper.View
 
             RequestContext postContext = RequestContext.DefaultContext();
             postContext.URL = postUrl;
+            postContext.Encoding = encoding;
             //postContext.Allowautoredirect = false;
             postContext.Method = "POST";
             postContext.Accept = "application/xhtml+xml, */*";

@@ -66,6 +66,8 @@ namespace Ripper.View.Model
         }
 
 
+        public int BrowserIndex { get; set; }
+
         public Entity(string line)
         {
             string[] paras = Utils.Split(line);

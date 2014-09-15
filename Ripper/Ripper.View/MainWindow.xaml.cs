@@ -1,4 +1,5 @@
 ﻿using Microsoft.Win32;
+using Ripper.View.Henan;
 using Ripper.View.Model;
 using Ripper.View.RipperDuplex;
 using System;
@@ -55,6 +56,8 @@ namespace Ripper.View
             InitializeComponent();
             Initilize();
         }
+
+
 
         public void Initilize()
         {

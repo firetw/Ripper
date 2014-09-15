@@ -282,10 +282,13 @@ namespace Ripper.View
             row.CreateCell(0).SetCellValue("手机号");
             row.CreateCell(1).SetCellValue("查询密码");
 
+            _currentSheet.SetColumnWidth(0, 5000);
+            _currentSheet.SetColumnWidth(1, 3000);
             for (int i = 0; i < ExportItem.Columns.Count; i++)
             {
                 int col = i + 2;
                 row.CreateCell(col).SetCellValue(ExportItem.Columns[i]);
+                //_currentSheet.SetColumnWidth(col, viewCol.Width);
             }
             _currentMask = 1;
         }

@@ -1,4 +1,5 @@
 ﻿using CommandLine;
+using Ripper.View.Henan;
 using Ripper.View.Model;
 using SamSung;
 using System;
@@ -22,14 +23,13 @@ namespace Ripper.View
         {
             Application.Current.DispatcherUnhandledException += Current_DispatcherUnhandledException;
 
+            #region 新疆网厅
             MainWindow mw = new MainWindow();
 
             var options = new Options();
             if (CommandLine.Parser.Default.ParseArguments(e.Args, options))
             {
-
                 mw.Initilize(options);
-
             }
             else
             {
@@ -37,12 +37,19 @@ namespace Ripper.View
             }
             mw.Show();
 
+            #endregion
+
+
+            #region 河南网厅查询
+            //QueryView view = new QueryView();
+            //view.Show();
+            #endregion
 
 
 
             //SamSung.SamSungRegister register = new SamSung.SamSungRegister();
 
-            
+
 
             //SamSungRegister register = new SamSungRegister();
             //register.Show();
